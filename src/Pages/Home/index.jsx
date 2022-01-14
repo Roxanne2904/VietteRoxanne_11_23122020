@@ -7,6 +7,10 @@ import { StyleBlackLayer } from '../../Styled/Home/index'
 import { StyledBannerTxt } from '../../Styled/Home/index'
 import { StyledRentalCover } from '../../Styled/Home/index'
 import { StyledRentals } from '../../Styled/Home/index'
+import { StyledRentalsTitle } from '../../Styled/Home/index'
+import { StyledRentalsGradient } from '../../Styled/Home/index'
+import { StyledRentalsImgContain } from '../../Styled/Home/index'
+import { StyledRentalsImg } from '../../Styled/Home/index'
 //router-dom
 // import { Navigate } from 'react-router-dom'
 //Context
@@ -34,7 +38,14 @@ class Home extends Component {
                 datas.map((data) => {
                   return (
                     <StyledRentals key={`${data.id}-${data.title}`}>
-                      <span>{data.title}</span>
+                      <StyledRentalsTitle>{data.title}</StyledRentalsTitle>
+                      <StyledRentalsGradient></StyledRentalsGradient>
+                      <StyledRentalsImgContain>
+                        <StyledRentalsImg
+                          src={`${data.pictures[0]}`}
+                          alt={`${data.title}`}
+                        />
+                      </StyledRentalsImgContain>
                     </StyledRentals>
                   )
                 })}
