@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import Banniere from '../../assets/banner.png'
 //---Styled
 import { StyledBanner } from '../../Styled/Home/index'
@@ -11,50 +10,85 @@ import { StyledRentalsTitle } from '../../Styled/Home/index'
 import { StyledRentalsGradient } from '../../Styled/Home/index'
 import { StyledRentalsImgContain } from '../../Styled/Home/index'
 import { StyledRentalsImg } from '../../Styled/Home/index'
-//router-dom
-// import { Navigate } from 'react-router-dom'
 //Context
 import { DatasContext } from '../../Utils/Context/index'
+import { useContext } from 'react'
 
-class Home extends Component {
-  render() {
-    return (
-      <DatasContext.Consumer>
-        {(datas) => (
-          <div>
-            <StyledBanner>
-              <StyledBannerImg
-                src={Banniere}
-                alt="la bannière"
-                className="banner_img"
-              />
-              <StyleBlackLayer className="banner_blackLayer"></StyleBlackLayer>
-              <StyledBannerTxt className="banner_txt">
-                Chez vous, partout et ailleurs
-              </StyledBannerTxt>
-            </StyledBanner>
-            <StyledRentalCover>
-              {datas !== null &&
-                datas.map((data) => {
-                  return (
-                    <StyledRentals key={`${data.id}-${data.title}`}>
-                      <StyledRentalsTitle>{data.title}</StyledRentalsTitle>
-                      <StyledRentalsGradient></StyledRentalsGradient>
-                      <StyledRentalsImgContain>
-                        <StyledRentalsImg
-                          src={`${data.pictures[0]}`}
-                          alt={`${data.title}`}
-                        />
-                      </StyledRentalsImgContain>
-                    </StyledRentals>
-                  )
-                })}
-            </StyledRentalCover>
-          </div>
-        )}
-      </DatasContext.Consumer>
-    )
-  }
+function Home() {
+  const { datas } = useContext(DatasContext)
+
+  console.log(datas)
+
+  return (
+    <div>
+      <StyledBanner>
+        <StyledBannerImg
+          src={Banniere}
+          alt="la bannière"
+          className="banner_img"
+        />
+        <StyleBlackLayer className="banner_blackLayer"></StyleBlackLayer>
+        <StyledBannerTxt className="banner_txt">
+          Chez vous, partout et ailleurs
+        </StyledBannerTxt>
+      </StyledBanner>
+      <StyledRentalCover>
+        {datas !== null &&
+          datas.map((data) => {
+            return (
+              <StyledRentals
+                to={`/host/${data.id}`}
+                key={`${data.id}-${data.title}`}
+              >
+                <StyledRentalsTitle>{data.title}</StyledRentalsTitle>
+                <StyledRentalsGradient></StyledRentalsGradient>
+                <StyledRentalsImgContain>
+                  <StyledRentalsImg
+                    src={`${data.pictures[0]}`}
+                    alt={`${data.title}`}
+                  />
+                </StyledRentalsImgContain>
+              </StyledRentals>
+            )
+          })}
+      </StyledRentalCover>
+    </div>
+
+    // <DatasContext.Consumer>
+    //   {(datas) => (
+    //     <div>
+    //       <StyledBanner>
+    //         <StyledBannerImg
+    //           src={Banniere}
+    //           alt="la bannière"
+    //           className="banner_img"
+    //         />
+    //         <StyleBlackLayer className="banner_blackLayer"></StyleBlackLayer>
+    //         <StyledBannerTxt className="banner_txt">
+    //           Chez vous, partout et ailleurs
+    //         </StyledBannerTxt>
+    //       </StyledBanner>
+    //       <StyledRentalCover>
+    //         {datas !== null &&
+    //           datas.map((data) => {
+    //             return (
+    //               <StyledRentals key={`${data.id}-${data.title}`}>
+    //                 <StyledRentalsTitle>{data.title}</StyledRentalsTitle>
+    //                 <StyledRentalsGradient></StyledRentalsGradient>
+    //                 <StyledRentalsImgContain>
+    //                   <StyledRentalsImg
+    //                     src={`${data.pictures[0]}`}
+    //                     alt={`${data.title}`}
+    //                   />
+    //                 </StyledRentalsImgContain>
+    //               </StyledRentals>
+    //             )
+    //           })}
+    //       </StyledRentalCover>
+    //     </div>
+    //   )}
+    // </DatasContext.Consumer>
+  )
 }
 
 export default Home

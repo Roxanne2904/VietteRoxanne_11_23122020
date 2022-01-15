@@ -2,6 +2,8 @@
 import { Radius } from '../../Utils/Styled/index'
 import { Colors } from '../../Utils/Styled/index'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+
 //---
 export const StyledBanner = styled.div`
   position: relative;
@@ -51,7 +53,7 @@ export const StyledRentalsTitle = styled.span`
   z-index: 1;
 `
 
-export const StyledRentals = styled.li`
+export const StyledRentals = styled(Link)`
   cursor: pointer;
   position: relative;
   display: flex;

@@ -28,8 +28,13 @@ export const StyledLi = styled(Link)`
   font-size: ${Size.mainFontSize};
   color: ${Colors.colorPrimary};
   font-weight: ${Weight.mainFontWeight};
+  text-decoration: none;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
   }
 `
+// &:hover {
+//   text-decoration: underline;
+//   cursor: pointer;
+// }

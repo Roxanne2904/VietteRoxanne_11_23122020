@@ -8,7 +8,7 @@ import Header from './Components/Header/index'
 //Pages
 import Home from './Pages/Home/index'
 import Error from './Pages/Error/index'
-import Test from './Pages/Test/index'
+import HostPage from './Pages/Host/index'
 //GlobalStyled
 import GlobalStyled from './Styled/Global/index'
 //Context
@@ -22,7 +22,7 @@ ReactDOM.render(
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/test" element={<Test />} />
+          <Route path="/host/:id" element={<HostPage hostDatas={null} />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </DatasProvider>
