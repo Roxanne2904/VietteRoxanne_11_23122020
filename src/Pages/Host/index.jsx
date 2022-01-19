@@ -3,9 +3,9 @@ import { DatasContext } from '../../Utils/Context/index'
 import { useContext } from 'react'
 import Carousel from '../../Components/Carousel'
 //font awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faStar } from '@fortawesome/free-solid-svg-icons'
+// import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 //Styled
 import { StyledHostIdContain } from '../../Styled/Pages/Host/index'
 import { StyledHostIdProfil } from '../../Styled/Pages/Host/index'
@@ -55,17 +55,13 @@ function HostPage(props) {
             ))}
           </ul>
           <ul>
-            <li>
-              <FontAwesomeIcon icon={faStar} />
-            </li>
+            <li>{/* <FontAwesomeIcon icon={faStar} /> */}</li>
           </ul>
         </div>
         <div>
           <div>
             <span>Description</span>
-            <span>
-              <FontAwesomeIcon icon={faChevronUp} />
-            </span>
+            <span>{/* <FontAwesomeIcon icon={faChevronUp} /> */}</span>
           </div>
         </div>
         <div>
