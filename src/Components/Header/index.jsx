@@ -1,11 +1,11 @@
 import logo from '../../assets/logo_kasa.png'
 
 //styled
-import { StyledHeader } from '../../Styled/Header/index'
-import { StyledImg } from '../../Styled/Header/index'
-import { StyledNav } from '../../Styled/Header/index'
-import { StyledUl } from '../../Styled/Header/index'
-import { StyledLi } from '../../Styled/Header/index'
+import { StyledHeader } from '../../Styled/Components/Header/index'
+import { StyledImg } from '../../Styled/Components/Header/index'
+import { StyledNav } from '../../Styled/Components/Header/index'
+import { StyledUl } from '../../Styled/Components/Header/index'
+import { StyledLi } from '../../Styled/Components/Header/index'
 //
 
 function Header() {

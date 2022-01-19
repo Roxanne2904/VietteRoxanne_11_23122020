@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { Weight } from '../../Utils/Styled/index'
-import { Colors } from '../../Utils/Styled/index'
-import { Size } from '../../Utils/Styled/index'
+import { Weight } from '../../../Utils/Styled/index'
+import { Colors } from '../../../Utils/Styled/index'
+import { Size } from '../../../Utils/Styled/index'
 import { Link } from 'react-router-dom'
 
 export const StyledHeader = styled.header`

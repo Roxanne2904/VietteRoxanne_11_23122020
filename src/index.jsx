@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import './css/index.css'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 //Components
 import Header from './Components/Header/index'
 //Pages
