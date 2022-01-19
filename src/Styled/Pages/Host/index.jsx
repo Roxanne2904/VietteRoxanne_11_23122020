@@ -65,3 +65,8 @@ export const StyledHostName = styled.span`
   color: ${Colors.colorPrimary};
   font-weight: ${Weight.mainFontWeight};
 `
+export const StyledTagsAndStarsContain = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`

@@ -2,10 +2,11 @@ import { useParams } from 'react-router-dom'
 import { DatasContext } from '../../Utils/Context/index'
 import { useContext } from 'react'
 import Carousel from '../../Components/Carousel'
+import Tags from '../../Components/Tags'
+import Stars from '../../Components/Stars'
 //font awesome
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faStar } from '@fortawesome/free-solid-svg-icons'
-// import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 //Styled
 import { StyledHostIdContain } from '../../Styled/Pages/Host/index'
 import { StyledHostIdProfil } from '../../Styled/Pages/Host/index'
@@ -15,6 +16,7 @@ import { StyledHostSubTitle } from '../../Styled/Pages/Host/index'
 import { StyledHostNameContain } from '../../Styled/Pages/Host/index'
 import { StyledHostFirstName } from '../../Styled/Pages/Host/index'
 import { StyledHostName } from '../../Styled/Pages/Host/index'
+import { StyledTagsAndStarsContain } from '../../Styled/Pages/Host/index'
 
 function HostPage(props) {
   const { id } = useParams()
@@ -22,7 +24,7 @@ function HostPage(props) {
   let { hostDatas } = props
 
   hostDatas = datas !== null && datas.filter((data) => data.id.includes(id))
-  console.log(hostDatas)
+  const rating = hostDatas !== false && parseInt(hostDatas[0].rating)
   // console.log(hostDatas[0].host.name.split(' ')[0])
   return (
     hostDatas !== false && (
@@ -48,26 +50,24 @@ function HostPage(props) {
             </StyledHostNameContain>
           </StyledHostIdProfil>
         </StyledHostIdContain>
-        <div>
-          <ul>
-            {hostDatas[0].tags.map((tag) => (
-              <li key={`${hostDatas[0].id}-${tag}`}>{tag}</li>
-            ))}
-          </ul>
-          <ul>
-            <li>{/* <FontAwesomeIcon icon={faStar} /> */}</li>
-          </ul>
-        </div>
+        <StyledTagsAndStarsContain>
+          <Tags />
+          <Stars rating={rating} />
+        </StyledTagsAndStarsContain>
         <div>
           <div>
             <span>Description</span>
-            <span>{/* <FontAwesomeIcon icon={faChevronUp} /> */}</span>
+            <span>
+              <FontAwesomeIcon icon={faChevronUp} />
+            </span>
           </div>
         </div>
         <div>
           <div>
             <span>Equipements</span>
-            <span>flèche vers le haut/bas</span>
+            <span>
+              <FontAwesomeIcon icon={faChevronUp} />
+            </span>
           </div>
         </div>
       </main>

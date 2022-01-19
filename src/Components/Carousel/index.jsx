@@ -11,7 +11,7 @@ function Carousel(props) {
   let { hostDatas } = props
 
   hostDatas = datas !== null && datas.filter((data) => data.id.includes(id))
-  console.log(hostDatas)
+
   return (
     <StyledHostImgContainer>
       <StyledHostImg

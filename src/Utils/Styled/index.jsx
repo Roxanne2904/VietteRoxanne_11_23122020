@@ -1,6 +1,7 @@
 export const Colors = {
   colorPrimary: ' #ff6060',
   colorBackG: ' #f6f6f6',
+  colorEmptyStars: ' #E3E3E3',
 }
 export const Size = {
   mainFontSize: '1.5rem', //24px
@@ -16,4 +17,5 @@ export const Weight = {
 }
 export const Margin = {
   mainMarginTop: '20px',
+  marginRight: '10px',
 }
