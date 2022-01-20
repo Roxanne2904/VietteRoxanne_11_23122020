@@ -70,3 +70,8 @@ export const StyledTagsAndStarsContain = styled.div`
   align-items: center;
   justify-content: space-between;
 `
+export const StyledListContain = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+`

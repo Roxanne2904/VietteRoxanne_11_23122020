@@ -6,7 +6,7 @@ export const StyledUlTags = styled.ul`
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 20px;
   color: white;
 `
 export const StyledLiTags = styled.li`
