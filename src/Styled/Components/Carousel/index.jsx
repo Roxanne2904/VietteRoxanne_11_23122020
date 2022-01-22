@@ -19,3 +19,24 @@ export const StyledHostImg = styled.img`
   object-fit: cover;
   display: block;
 `
+
+export const StyledCarousel = styled.div`
+  display: flex;
+  position: relative;
+  color: white;
+`
+export const StyledCarouselArrowLeft = styled.span`
+  display: block;
+  position: absolute;
+  top: 46%;
+  font-size: 4.5rem;
+  padding: 0 23px;
+`
+export const StyledCarouselArrowRight = styled.span`
+  display: block;
+  position: absolute;
+  top: 46%;
+  font-size: 4.5rem;
+  padding: 0 23px;
+  right: 0;
+`

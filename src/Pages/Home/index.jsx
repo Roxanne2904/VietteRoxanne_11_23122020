@@ -1,14 +1,9 @@
-//---Styled
-import { StyledBanner } from '../../Styled/Pages/Home/index'
-import { StyledBannerImg } from '../../Styled/Pages/Home/index'
-import { StyleBlackLayer } from '../../Styled/Pages/Home/index'
-import { StyledBannerTxt } from '../../Styled/Pages/Home/index'
 //Context
 import { DatasContext } from '../../Utils/Context/index'
 import { useContext } from 'react'
-//
-import Img from '../../assets/banner.png'
+//Components
 import Cards from '../../Components/Cards'
+import Banner from '../../Components/Banner'
 
 function Home() {
   const { datas } = useContext(DatasContext)
@@ -16,11 +11,7 @@ function Home() {
 
   return (
     <main>
-      <StyledBanner>
-        <StyledBannerImg src={Img} alt="la bannière" />
-        <StyleBlackLayer></StyleBlackLayer>
-        <StyledBannerTxt>Chez vous, partout et ailleurs</StyledBannerTxt>
-      </StyledBanner>
+      <Banner img={'http://localhost:3000/banner.png'} />
       <Cards />
     </main>
 

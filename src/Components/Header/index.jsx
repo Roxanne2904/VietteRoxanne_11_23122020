@@ -14,10 +14,10 @@ function Header() {
       <StyledImg src={logo} alt="logo" tabIndex="1" />
       <StyledNav>
         <StyledUl>
-          <StyledLi to="/" tabIndex="1">
+          <StyledLi to="" tabIndex="1">
             Accueil
           </StyledLi>
-          <StyledLi to="/" tabIndex="1">
+          <StyledLi to="/about" tabIndex="1">
             A propos
           </StyledLi>
         </StyledUl>

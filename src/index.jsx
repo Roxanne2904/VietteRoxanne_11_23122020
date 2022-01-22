@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom'
 import './css/index.css'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-
 //Components
 import Header from './Components/Header/index'
 //Pages
 import Home from './Pages/Home/index'
 import Error from './Pages/Error/index'
 import HostPage from './Pages/Host/index'
+import About from './Pages/About'
 //GlobalStyled
 import GlobalStyled from './Styled/Global/index'
 //Context
@@ -24,6 +24,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/host/:id" element={<HostPage hostDatas={null} />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </DatasProvider>
