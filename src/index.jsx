@@ -10,6 +10,7 @@ import Home from './Pages/Home/index'
 import Error from './Pages/Error/index'
 import HostPage from './Pages/Host/index'
 import About from './Pages/About'
+import Footer from './Components/Footer'
 //GlobalStyled
 import GlobalStyled from './Styled/Global/index'
 //Context
@@ -27,6 +28,7 @@ ReactDOM.render(
           <Route path="/about" element={<About />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer />
       </DatasProvider>
     </Router>
   </React.StrictMode>,

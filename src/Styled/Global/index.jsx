@@ -10,13 +10,14 @@ const GlobalStyled = createGlobalStyle`
     font-family: 'montserratregular';
   }
   
-  html {
-    scroll-behavior: smooth;
-    transition: 1s ease;
-  }
-  
-  body {
+  main, header{
     margin: 40px 100px;
+    @media (min-width: 320px) and (max-width: 768px) {
+      margin: 20px;
+    }
+  }
+
+  body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
       sans-serif;

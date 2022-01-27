@@ -13,6 +13,12 @@ export const StyledCardsCover = styled.ul`
   background: ${Colors.colorBackG};
   justify-content: space-between;
   flex-wrap: wrap;
+  @media (min-width: 320px) and (max-width: 950px) {
+    flex-direction: column;
+    padding: 0px;
+    background: transparent;
+    margin-top: 20px;
+  }
 `
 export const StyledCardsTitle = styled.figcaption`
   position: absolute;
@@ -40,6 +46,14 @@ export const StyledCards = styled(Link)`
     ${StyledCardsTitle} {
       font-weight: 600;
     }
+  }
+  @media (min-width: 481px) and (max-width: 1080px) {
+    width: 45%;
+  }
+  @media (min-width: 320px) and (max-width: 950px) {
+    width: 100%;
+    height: 255px;
+    margin-bottom: 20px;
   }
 `
 export const StyledCardsGradient = styled.span`

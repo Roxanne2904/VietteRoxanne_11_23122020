@@ -3,17 +3,22 @@ import { Weight } from '../../../Utils/Styled/index'
 import { Colors } from '../../../Utils/Styled/index'
 import { Size } from '../../../Utils/Styled/index'
 import { Link } from 'react-router-dom'
+//responsive
+import { px2vw } from '../../../Utils/px2vw/index'
 
 export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
 `
 export const StyledImg = styled.img`
-  width: 210.32px;
-  height: 68px;
+  max-width: 100%;
+  height: auto;
+  @media (min-width: 320px) and (max-width: 768px) {
+    max-width: 45%;
+  }
 `
+
 export const StyledNav = styled.nav`
-  width: 20%;
   display: flex;
   align-items: center;
 `
@@ -29,9 +34,14 @@ export const StyledLi = styled(Link)`
   color: ${Colors.colorPrimary};
   font-weight: ${Weight.mainFontWeight};
   text-decoration: none;
+  margin: 10px 0 0 57px;
   &:hover {
     text-decoration: underline;
     cursor: pointer;
+  }
+  @media (min-width: 320px) and (max-width: 768px) {
+    font-size: ${px2vw(12, 320)};
+    margin-left: 20px;
   }
 `
 // &:hover {

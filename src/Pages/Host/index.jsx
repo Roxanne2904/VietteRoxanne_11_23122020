@@ -58,8 +58,8 @@ function HostPage(props) {
           <Stars rating={rating} />
         </StyledTagsAndStarsContain>
         <StyledListContain>
-          <Lists theme={description} title="Description" />
-          <Lists theme={equipments} title="Equipements" />
+          <Lists contain={description} title="Description" page="host" />
+          <Lists contain={equipments} title="Equipements" page="host" />
         </StyledListContain>
       </main>
     )

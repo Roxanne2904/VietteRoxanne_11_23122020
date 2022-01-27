@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Colors } from '../../../Utils/Styled/index'
 import { Radius } from '../../../Utils/Styled/index'
 
+//Host Page
 export const StyledList = styled.div`
   width: 47%;
 `
@@ -39,4 +40,27 @@ export const StyledListParagraphe = styled.p`
   background: ${Colors.colorBackG};
   min-height: 249px;
   border-radius: ${Radius.cardsRadius};
+`
+
+//About page
+export const StyledAboutList = styled.div`
+  width: 80%;
+`
+
+export const StyledAboutListParagraphe = styled.p`
+  padding: 20px;
+  color: ${Colors.colorPrimary};
+  background: ${Colors.colorBackG};
+  border-radius: ${Radius.cardsRadius};
+`
+
+export const StyledAboutListTitleContain = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 20px;
+  background: ${Colors.colorPrimary};
+  border-radius: ${Radius.cardsRadius};
+  color: white;
+  align-items: center;
+  margin-top: 31px;
 `
