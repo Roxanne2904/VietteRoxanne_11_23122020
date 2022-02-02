@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom'
+import { useState } from 'react'
 //
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
@@ -20,60 +21,59 @@ import { StyledAboutListTitleContain } from '../../Styled/Components/Lists/index
 function Lists(props) {
   const { id } = useParams()
   const { contain, title, page } = props
+  const [isOpen, setIsOpen] = useState('close')
+  const [isUp, setIsDown] = useState(faChevronUp)
+
+  const handleTheOpenList = () => {
+    isUp === faChevronUp ? setIsDown(faChevronDown) : setIsDown(faChevronUp)
+    isOpen === 'close' ? setIsOpen('open') : setIsOpen('close')
+  }
 
   return page !== 'about' ? (
     <StyledList>
       <StyledListTitleContain>
         <StyledListTitle>{title}</StyledListTitle>
-        <StyledListIcone>
+        <StyledListIcone onClick={() => handleTheOpenList()}>
           {contain !== null ? (
-            <FontAwesomeIcon icon={faChevronUp} />
+            <FontAwesomeIcon icon={isUp} />
           ) : (
             <FontAwesomeIcon icon={faChevronDown} />
           )}
         </StyledListIcone>
       </StyledListTitleContain>
 
-      {contain !== null ? (
-        typeof contain !== 'object' ? (
-          <StyledListParagraphe>{contain}</StyledListParagraphe>
-        ) : (
-          <StyledListUL>
-            {contain.map((elmnt, index) => (
-              <StyledListLi key={`${id}-${elmnt}-${index}`}>
-                {elmnt}
-              </StyledListLi>
-            ))}
-          </StyledListUL>
-        )
-      ) : null}
+      {typeof contain !== 'object' ? (
+        <StyledListParagraphe className={`${isOpen}`}>
+          {contain}
+        </StyledListParagraphe>
+      ) : (
+        <StyledListUL className={`${isOpen}`}>
+          {contain.map((elmnt, index) => (
+            <StyledListLi key={`${id}-${elmnt}-${index}`}>{elmnt}</StyledListLi>
+          ))}
+        </StyledListUL>
+      )}
     </StyledList>
   ) : (
     <StyledAboutList>
       <StyledAboutListTitleContain>
         <StyledListTitle>{title}</StyledListTitle>
-        <StyledListIcone>
-          {contain !== null ? (
-            <FontAwesomeIcon icon={faChevronUp} />
-          ) : (
-            <FontAwesomeIcon icon={faChevronDown} />
-          )}
+        <StyledListIcone onClick={() => handleTheOpenList()}>
+          <FontAwesomeIcon icon={isUp} />
         </StyledListIcone>
       </StyledAboutListTitleContain>
 
-      {contain !== null ? (
-        typeof contain !== 'object' ? (
-          <StyledAboutListParagraphe>{contain}</StyledAboutListParagraphe>
-        ) : (
-          <StyledListUL>
-            {contain.map((elmnt, index) => (
-              <StyledListLi key={`${id}-${elmnt}-${index}`}>
-                {elmnt}
-              </StyledListLi>
-            ))}
-          </StyledListUL>
-        )
-      ) : null}
+      {typeof contain !== 'object' ? (
+        <StyledAboutListParagraphe className={`${isOpen}`}>
+          {contain}
+        </StyledAboutListParagraphe>
+      ) : (
+        <StyledListUL className={`${isOpen}`}>
+          {contain.map((elmnt, index) => (
+            <StyledListLi key={`${id}-${elmnt}-${index}`}>{elmnt}</StyledListLi>
+          ))}
+        </StyledListUL>
+      )}
     </StyledAboutList>
   )
 }

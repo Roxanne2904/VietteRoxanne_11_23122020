@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 import { Margin } from '../../../Utils/Styled/index'
-export const StyledFooter = styled.div`
+//responsive
+import { breakpoints } from '../../../Utils/Breakpoints'
+import { px2vw } from '../../../Utils/px2vw/index'
+
+export const StyledFooter = styled.footer`
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -15,4 +19,13 @@ export const StyledRightstext = styled.p`
   margin-bottom: 29px;
   color: white;
   font-size: 1.5rem;
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.s}) {
+    font-size: ${px2vw(12, 320)};
+    margin-bottom: ${px2vw(62, 320)};
+  }
+`
+export const StyledImgLogo = styled.img`
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.s}) {
+    width: 110%;
+  }
 `

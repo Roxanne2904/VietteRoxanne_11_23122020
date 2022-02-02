@@ -5,3 +5,10 @@
   font-weight: normal;
   font-style: normal;
 }
+
+.close {
+  display: none;
+}
+.open {
+  display: block;
+}

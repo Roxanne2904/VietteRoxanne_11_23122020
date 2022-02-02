@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { DatasContext } from '../../Utils/Context/index'
-import { useContext } from 'react'
+import { useContext, useState, useEffect } from 'react'
+
 //styled
 import { StyledHostImgContainer } from '../../Styled/Components/Carousel/index'
 import { StyledHostImg } from '../../Styled/Components/Carousel/index'
@@ -18,21 +19,59 @@ function Carousel(props) {
   let { hostDatas } = props
 
   hostDatas = datas !== null && datas.filter((data) => data.id.includes(id))
+  const hostPictures = hostDatas[0].pictures
+  const [img, updateImg] = useState(0)
 
-  return (
+  //handleClicks
+  const handleOnClickLeft = () => {
+    img <= 0 ? updateImg(hostPictures.length - 1) : updateImg(img - 1)
+  }
+  const handleOnClickRight = () => {
+    img < hostPictures.length - 1 ? updateImg(img + 1) : updateImg(0)
+  }
+
+  useEffect(() => {
+    const handleWindowClick = (e) => {
+      const { keyCode } = e
+
+      if (keyCode === 39) {
+        img < hostPictures.length - 1 ? updateImg(img + 1) : updateImg(0)
+        console.log(img)
+      }
+      if (keyCode === 37) {
+        img <= 0 ? updateImg(hostPictures.length - 1) : updateImg(img - 1)
+        console.log(img)
+      }
+    }
+
+    window.addEventListener('keydown', handleWindowClick)
+
+    return () => window.removeEventListener('keydown', handleWindowClick)
+  }, [img, hostPictures.length])
+
+  return hostPictures.length !== 1 ? (
     <StyledCarousel>
-      <StyledCarouselArrowLeft>
+      <StyledCarouselArrowLeft onClick={() => handleOnClickLeft()}>
         <FontAwesomeIcon icon={faChevronLeft} />
       </StyledCarouselArrowLeft>
       <StyledHostImgContainer>
         <StyledHostImg
-          src={`${hostDatas[0].pictures[0]}`}
+          src={`${hostDatas[0].pictures[img]}`}
           alt={`${hostDatas[0].title}`}
         />
       </StyledHostImgContainer>
-      <StyledCarouselArrowRight>
+      <StyledCarouselArrowRight onClick={() => handleOnClickRight()}>
         <FontAwesomeIcon icon={faChevronRight} />
       </StyledCarouselArrowRight>
+    </StyledCarousel>
+  ) : (
+    <StyledCarousel>
+      <StyledHostImgContainer>
+        <StyledHostImg
+          src={`${hostDatas[0].pictures[img]}`}
+          alt={`${hostDatas[0].title}`}
+        />
+      </StyledHostImgContainer>
     </StyledCarousel>
   )
 }

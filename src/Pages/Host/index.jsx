@@ -7,7 +7,8 @@ import Stars from '../../Components/Stars'
 import Lists from '../../Components/Lists'
 
 //Styled
-import { StyledHostIdContain } from '../../Styled/Pages/Host/index'
+import { StyledGeneralIdContain } from '../../Styled/Pages/Host/index'
+import { StyledHostIdAndTagsContain } from '../../Styled/Pages/Host/index'
 import { StyledHostIdProfil } from '../../Styled/Pages/Host/index'
 import { StyledHostIdImg } from '../../Styled/Pages/Host/index'
 import { StyledHostMainTitle } from '../../Styled/Pages/Host/index'
@@ -15,7 +16,7 @@ import { StyledHostSubTitle } from '../../Styled/Pages/Host/index'
 import { StyledHostNameContain } from '../../Styled/Pages/Host/index'
 import { StyledHostFirstName } from '../../Styled/Pages/Host/index'
 import { StyledHostName } from '../../Styled/Pages/Host/index'
-import { StyledTagsAndStarsContain } from '../../Styled/Pages/Host/index'
+import { StyledProfilAndStarsContain } from '../../Styled/Pages/Host/index'
 import { StyledListContain } from '../../Styled/Pages/Host/index'
 
 function HostPage(props) {
@@ -33,30 +34,32 @@ function HostPage(props) {
     hostDatas !== false && (
       <main>
         <Carousel />
-        <StyledHostIdContain>
-          <div>
-            <StyledHostMainTitle>{`${hostDatas[0].title}`}</StyledHostMainTitle>
-            <StyledHostSubTitle>{`${hostDatas[0].location}`}</StyledHostSubTitle>
-          </div>
-          <StyledHostIdProfil>
-            <StyledHostIdImg
-              src={`${hostDatas[0].host.picture}`}
-              alt={`${hostDatas[0].host.name}`}
-            />
-            <StyledHostNameContain>
-              <StyledHostFirstName>{`${
-                hostDatas[0].host.name.split(' ')[0]
-              }`}</StyledHostFirstName>
-              <StyledHostName>{`${
-                hostDatas[0].host.name.split(' ')[1]
-              }`}</StyledHostName>
-            </StyledHostNameContain>
-          </StyledHostIdProfil>
-        </StyledHostIdContain>
-        <StyledTagsAndStarsContain>
-          <Tags />
-          <Stars rating={rating} />
-        </StyledTagsAndStarsContain>
+        <StyledGeneralIdContain>
+          <StyledHostIdAndTagsContain>
+            <div>
+              <StyledHostMainTitle>{`${hostDatas[0].title}`}</StyledHostMainTitle>
+              <StyledHostSubTitle>{`${hostDatas[0].location}`}</StyledHostSubTitle>
+            </div>
+            <Tags />
+          </StyledHostIdAndTagsContain>
+          <StyledProfilAndStarsContain>
+            <StyledHostIdProfil>
+              <StyledHostIdImg
+                src={`${hostDatas[0].host.picture}`}
+                alt={`${hostDatas[0].host.name}`}
+              />
+              <StyledHostNameContain>
+                <StyledHostFirstName>{`${
+                  hostDatas[0].host.name.split(' ')[0]
+                }`}</StyledHostFirstName>
+                <StyledHostName>{`${
+                  hostDatas[0].host.name.split(' ')[1]
+                }`}</StyledHostName>
+              </StyledHostNameContain>
+            </StyledHostIdProfil>
+            <Stars rating={rating} />
+          </StyledProfilAndStarsContain>
+        </StyledGeneralIdContain>
         <StyledListContain>
           <Lists contain={description} title="Description" page="host" />
           <Lists contain={equipments} title="Equipements" page="host" />

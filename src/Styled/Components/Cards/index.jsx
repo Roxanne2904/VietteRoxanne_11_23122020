@@ -2,6 +2,8 @@ import { Radius } from '../../../Utils/Styled/index'
 import { Colors } from '../../../Utils/Styled/index'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+//responsive
+import { breakpoints } from '../../../Utils/Breakpoints/index'
 
 export const StyledCardsCover = styled.ul`
   width: 100%;
@@ -13,7 +15,7 @@ export const StyledCardsCover = styled.ul`
   background: ${Colors.colorBackG};
   justify-content: space-between;
   flex-wrap: wrap;
-  @media (min-width: 320px) and (max-width: 950px) {
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.m}) {
     flex-direction: column;
     padding: 0px;
     background: transparent;
@@ -47,10 +49,10 @@ export const StyledCards = styled(Link)`
       font-weight: 600;
     }
   }
-  @media (min-width: 481px) and (max-width: 1080px) {
+  @media (min-width: ${breakpoints.s_1}) and (max-width: ${breakpoints.l}) {
     width: 45%;
   }
-  @media (min-width: 320px) and (max-width: 950px) {
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.m}) {
     width: 100%;
     height: 255px;
     margin-bottom: 20px;
@@ -75,4 +77,7 @@ export const StyledCardsImg = styled.img`
   height: 340px;
   display: block;
   width: 100%;
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.m}) {
+    height: 255px;
+  }
 `

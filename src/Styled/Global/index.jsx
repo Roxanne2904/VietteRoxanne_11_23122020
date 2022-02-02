@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { breakpoints } from '../../Utils/Breakpoints'
 
 const GlobalStyled = createGlobalStyle`
 
@@ -12,17 +13,25 @@ const GlobalStyled = createGlobalStyle`
   
   main, header{
     margin: 40px 100px;
-    @media (min-width: 320px) and (max-width: 768px) {
+    @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.s}) {
       margin: 20px;
     }
+    @media (min-width: ${breakpoints.s_1}) and (max-width: ${breakpoints.sm}) {
+      margin: 35px;
+    }
+    
   }
-
+  
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
       "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @media (min-width: ${breakpoints.xxl}){
+      margin: 40px auto;
+      width: 1600px;
+    }
   }
 
   code {

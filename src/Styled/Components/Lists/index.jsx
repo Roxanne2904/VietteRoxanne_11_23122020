@@ -1,10 +1,17 @@
 import styled from 'styled-components'
 import { Colors } from '../../../Utils/Styled/index'
 import { Radius } from '../../../Utils/Styled/index'
+//responsive
+import { breakpoints } from '../../../Utils/Breakpoints'
+import { px2vw } from '../../../Utils/px2vw'
 
 //Host Page
 export const StyledList = styled.div`
   width: 47%;
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    width: 100%;
+    margin-bottom: ${px2vw(25, 320)};
+  }
 `
 export const StyledListTitleContain = styled.div`
   display: flex;
@@ -14,13 +21,23 @@ export const StyledListTitleContain = styled.div`
   border-radius: ${Radius.cardsRadius};
   color: white;
   align-items: center;
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    padding: ${px2vw(8, 320)} ${px2vw(15, 320)};
+  }
 `
-export const StyledListTitle = styled.span`
-  display: block;
+export const StyledListTitle = styled.h3`
+  font-weight: 500;
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: ${px2vw(13, 320)};
+  }
 `
 export const StyledListIcone = styled.span`
   display: block;
   font-size: 1.3rem;
+  cursor: pointer;
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: ${px2vw(13, 320)};
+  }
 `
 export const StyledListUL = styled.ul`
   list-style-type: none;
@@ -29,9 +46,15 @@ export const StyledListUL = styled.ul`
   background: ${Colors.colorBackG};
   min-height: 249px;
   border-radius: ${Radius.cardsRadius};
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    min-height: ${px2vw(143, 320)};
+  }
 `
 export const StyledListLi = styled.li`
   padding: 3px 0;
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: ${px2vw(12, 320)};
+  }
 `
 
 export const StyledListParagraphe = styled.p`
@@ -40,6 +63,10 @@ export const StyledListParagraphe = styled.p`
   background: ${Colors.colorBackG};
   min-height: 249px;
   border-radius: ${Radius.cardsRadius};
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    min-height: ${px2vw(143, 320)};
+    font-size: ${px2vw(12, 320)};
+  }
 `
 
 //About page

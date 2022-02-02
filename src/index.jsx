@@ -11,6 +11,7 @@ import Error from './Pages/Error/index'
 import HostPage from './Pages/Host/index'
 import About from './Pages/About'
 import Footer from './Components/Footer'
+
 //GlobalStyled
 import GlobalStyled from './Styled/Global/index'
 //Context
