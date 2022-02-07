@@ -1,13 +1,13 @@
 //Context
-import { DatasContext } from '../../Utils/Context/index'
-import { useContext } from 'react'
+// import { DatasContext } from '../../Utils/Context/index'
+// import { useContext } from 'react'
 //Components
 import Cards from '../../Components/Cards'
 import Banner from '../../Components/Banner'
 
 function Home() {
-  const { datas } = useContext(DatasContext)
-  console.log(datas)
+  // const { datas } = useContext(DatasContext)
+  // console.log(datas)
 
   return (
     <main>

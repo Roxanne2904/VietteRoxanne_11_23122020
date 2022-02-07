@@ -13,10 +13,6 @@ import { StyledListIcone } from '../../Styled/Components/Lists/index'
 import { StyledListUL } from '../../Styled/Components/Lists/index'
 import { StyledListLi } from '../../Styled/Components/Lists/index'
 import { StyledListParagraphe } from '../../Styled/Components/Lists/index'
-//About page
-import { StyledAboutList } from '../../Styled/Components/Lists/index'
-import { StyledAboutListParagraphe } from '../../Styled/Components/Lists/index'
-import { StyledAboutListTitleContain } from '../../Styled/Components/Lists/index'
 
 function Lists(props) {
   const { id } = useParams()
@@ -55,18 +51,18 @@ function Lists(props) {
       )}
     </StyledList>
   ) : (
-    <StyledAboutList>
-      <StyledAboutListTitleContain>
+    <StyledList about="true">
+      <StyledListTitleContain about="true">
         <StyledListTitle>{title}</StyledListTitle>
         <StyledListIcone onClick={() => handleTheOpenList()}>
           <FontAwesomeIcon icon={isUp} />
         </StyledListIcone>
-      </StyledAboutListTitleContain>
+      </StyledListTitleContain>
 
       {typeof contain !== 'object' ? (
-        <StyledAboutListParagraphe className={`${isOpen}`}>
+        <StyledListParagraphe about="true" className={`${isOpen}`}>
           {contain}
-        </StyledAboutListParagraphe>
+        </StyledListParagraphe>
       ) : (
         <StyledListUL className={`${isOpen}`}>
           {contain.map((elmnt, index) => (
@@ -74,18 +70,8 @@ function Lists(props) {
           ))}
         </StyledListUL>
       )}
-    </StyledAboutList>
+    </StyledList>
   )
 }
 
 export default Lists
-
-// typeof theme !== 'object' ? (
-//   <StyledListParagraphe>{theme}</StyledListParagraphe>
-// ) : (
-//   <StyledListUL>
-//     {theme.map((elmnt, index) => (
-//       <StyledListLi key={`${id}-${elmnt}-${index}`}>{elmnt}</StyledListLi>
-//     ))}
-//   </StyledListUL>
-// )

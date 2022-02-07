@@ -18,7 +18,7 @@ function Header() {
             Accueil
           </StyledLi>
           <StyledLi to="/about" tabIndex="1">
-            A propos
+            A Propos
           </StyledLi>
         </StyledUl>
       </StyledNav>

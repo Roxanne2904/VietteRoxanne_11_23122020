@@ -1,10 +1,6 @@
 import styled from 'styled-components'
-// import { Weight } from '../../../Utils/Styled/index'
-// import { Colors } from '../../../Utils/Styled/index'
-// import { Size } from '../../../Utils/Styled/index'
 import { Radius } from '../../../Utils/Styled/index'
 import { Margin } from '../../../Utils/Styled/index'
-// import { Link } from 'react-router-dom'
 //responsive
 import { breakpoints } from '../../../Utils/Breakpoints'
 import { px2vw } from '../../../Utils/px2vw'

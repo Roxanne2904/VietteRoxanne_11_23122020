@@ -29,9 +29,9 @@ function Carousel(props) {
   const handleOnClickRight = () => {
     img < hostPictures.length - 1 ? updateImg(img + 1) : updateImg(0)
   }
-
+  //handleArrowKeydown
   useEffect(() => {
-    const handleWindowClick = (e) => {
+    const handleArrowKeyDown = (e) => {
       const { keyCode } = e
 
       if (keyCode === 39) {
@@ -44,9 +44,9 @@ function Carousel(props) {
       }
     }
 
-    window.addEventListener('keydown', handleWindowClick)
+    window.addEventListener('keydown', handleArrowKeyDown)
 
-    return () => window.removeEventListener('keydown', handleWindowClick)
+    return () => window.removeEventListener('keydown', handleArrowKeyDown)
   }, [img, hostPictures.length])
 
   return hostPictures.length !== 1 ? (

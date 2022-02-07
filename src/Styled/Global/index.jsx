@@ -17,7 +17,7 @@ const GlobalStyled = createGlobalStyle`
       margin: 20px;
     }
     @media (min-width: ${breakpoints.s_1}) and (max-width: ${breakpoints.sm}) {
-      margin: 35px;
+      margin: 30px 50px;
     }
     
   }

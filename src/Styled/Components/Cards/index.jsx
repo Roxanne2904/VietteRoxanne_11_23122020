@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 //responsive
 import { breakpoints } from '../../../Utils/Breakpoints/index'
+import { px2vw } from '../../../Utils/px2vw/index'
 
 export const StyledCardsCover = styled.ul`
   width: 100%;
@@ -21,6 +22,9 @@ export const StyledCardsCover = styled.ul`
     background: transparent;
     margin-top: 20px;
   }
+  @media (min-width: ${breakpoints.sm_1}) and (max-width: ${breakpoints.l}) {
+    margin-top: 63px;
+  }
 `
 export const StyledCardsTitle = styled.figcaption`
   position: absolute;
@@ -29,6 +33,18 @@ export const StyledCardsTitle = styled.figcaption`
   font-weight: 500;
   color: white;
   z-index: 1;
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.s}) {
+    font-size: ${px2vw(15, 320)};
+  }
+  @media (min-width: ${breakpoints.s_1}) and (max-width: ${breakpoints.sm}) {
+    font-size: ${px2vw(18, 481)};
+  }
+  @media (min-width: ${breakpoints.sm_1}) and (max-width: ${breakpoints.m}) {
+    font-size: ${px2vw(20, 769)};
+  }
+  @media (min-width: ${breakpoints.m}) and (max-width: ${breakpoints.l}) {
+    font-size: ${px2vw(17, 950)};
+  }
 `
 
 export const StyledCards = styled(Link)`
