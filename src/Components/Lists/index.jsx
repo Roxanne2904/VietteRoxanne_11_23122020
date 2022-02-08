@@ -13,6 +13,8 @@ import { StyledListIcone } from '../../Styled/Components/Lists/index'
 import { StyledListUL } from '../../Styled/Components/Lists/index'
 import { StyledListLi } from '../../Styled/Components/Lists/index'
 import { StyledListParagraphe } from '../../Styled/Components/Lists/index'
+//propTypes
+import PropTypes from 'prop-types'
 
 function Lists(props) {
   const { id } = useParams()
@@ -74,4 +76,8 @@ function Lists(props) {
   )
 }
 
+Lists.propTypes = {
+  title: PropTypes.string.isRequired,
+  page: PropTypes.string.isRequired,
+}
 export default Lists

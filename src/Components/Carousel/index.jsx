@@ -29,6 +29,7 @@ function Carousel(props) {
   const handleOnClickRight = () => {
     img < hostPictures.length - 1 ? updateImg(img + 1) : updateImg(0)
   }
+
   //handleArrowKeydown
   useEffect(() => {
     const handleArrowKeyDown = (e) => {
@@ -48,7 +49,7 @@ function Carousel(props) {
 
     return () => window.removeEventListener('keydown', handleArrowKeyDown)
   }, [img, hostPictures.length])
-
+  //----------------------------------
   return hostPictures.length !== 1 ? (
     <StyledCarousel>
       <StyledCarouselArrowLeft onClick={() => handleOnClickLeft()}>

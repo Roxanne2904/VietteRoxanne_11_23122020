@@ -6,10 +6,13 @@ import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { StyledUlStars } from '../../Styled/Components/Stars/index'
 import { StyledLiFullStars } from '../../Styled/Components/Stars/index'
 import { StyledLiEmptyStars } from '../../Styled/Components/Stars/index'
+//propTypes
+import PropTypes from 'prop-types'
 
 function Stars(props) {
   const { id } = useParams()
   let { rating } = props
+
   const range = [1, 2, 3, 4, 5]
   return (
     <StyledUlStars>
@@ -27,5 +30,7 @@ function Stars(props) {
     </StyledUlStars>
   )
 }
-
+Stars.propTypes = {
+  rating: PropTypes.number,
+}
 export default Stars

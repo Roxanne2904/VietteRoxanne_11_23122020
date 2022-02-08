@@ -4,6 +4,8 @@ import { StyledBannerImg } from '../../Styled/Components/Banner/index'
 import { StyledBlackLayer } from '../../Styled/Components/Banner/index'
 import { StyledBannerTxt } from '../../Styled/Components/Banner/index'
 import { StyledBannertxt01 } from '../../Styled/Components/Banner/index'
+//propTypes
+import PropTypes from 'prop-types'
 
 function Banner(props) {
   const { img } = props
@@ -25,4 +27,7 @@ function Banner(props) {
   )
 }
 
+Banner.propTypes = {
+  img: PropTypes.string,
+}
 export default Banner
