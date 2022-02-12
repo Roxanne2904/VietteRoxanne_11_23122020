@@ -1,9 +1,3 @@
-//styled
-// import { StyledBanner } from '../../Styled/Components/Banner/index'
-// import { StyledBannerImg } from '../../Styled/Components/Banner/index'
-// import { StyledBlackLayer } from '../../Styled/Components/Banner/index'
-// import { StyledBannerTxt } from '../../Styled/Components/Banner/index'
-// import { StyledBannertxt01 } from '../../Styled/Components/Banner/index'
 import banner from '../../assets/banner.png'
 import bannerAbout from '../../assets/banner_about.png'
 import smallerBannerAbout from '../../assets/smaller-banner_about.png'

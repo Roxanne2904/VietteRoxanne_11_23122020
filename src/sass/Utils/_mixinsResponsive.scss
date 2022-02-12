@@ -41,7 +41,7 @@
   }
 }
 //handle the radius
-@mixin responsive-sx-sm-bannerRadius {
+@mixin responsive-xs-sm-bannerRadius {
   @include responsive-minWidth-MaxWidth('xs', 'l') {
     border-radius: $cardsRadius;
   }
@@ -51,6 +51,7 @@
 @mixin responsive-xs-sm-carouselHeight {
   @include responsive-minWidth-MaxWidth('xs', 'sm') {
     height: $height-phone-carousel;
+    border-radius: $cardsRadius;
   }
 }
 

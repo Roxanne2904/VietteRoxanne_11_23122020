@@ -1,9 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { DatasContext } from '../../Utils/Context/index'
 import { useContext } from 'react'
-//Styled
-// import { StyledUlTags } from '../../Styled/Components/Tags/index'
-// import { StyledLiTags } from '../../Styled/Components/Tags/index'
 
 function Tags(props) {
   const { id } = useParams()

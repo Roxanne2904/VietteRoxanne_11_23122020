@@ -1,12 +1,6 @@
 import Banner from '../../Components/Banner'
 import Collapse from '../../Components/Collapse/index'
-// import styled from 'styled-components'
 
-// const StyledAboutContain = styled.div`
-//   display: flex;
-//   align-items: center;
-//   flex-direction: column;
-// `
 const text = {
   fiability: `Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.`,
   respect: `La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.`,

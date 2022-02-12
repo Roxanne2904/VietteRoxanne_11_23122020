@@ -18,7 +18,7 @@
     width: 100%;
     object-fit: cover;
     @include banner-heights;
-    @include responsive-sx-sm-bannerRadius;
+    @include responsive-xs-sm-bannerRadius;
     @include responsive-xs_1-sm-bannerMinHeight;
     @include responsive-sm_1-l-bannerMinHeight;
     &--about {
@@ -37,7 +37,7 @@
     right: 0;
     background-color: black;
     opacity: 0.2;
-    @include responsive-sx-sm-bannerRadius;
+    @include responsive-xs-sm-bannerRadius;
   }
   &__title {
     position: absolute;

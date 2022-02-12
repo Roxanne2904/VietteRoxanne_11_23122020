@@ -1,11 +1,5 @@
 import logoFooter from '../../assets/logoFooter.png'
 
-//styled
-// import { StyledFooter } from '../../Styled/Components/Footer/index.jsx'
-// import { StyledLogoContain } from '../../Styled/Components/Footer/index.jsx'
-// import { StyledRightstext } from '../../Styled/Components/Footer/index.jsx'
-// import { StyledImgLogo } from '../../Styled/Components/Footer/index.jsx'
-
 function Footer() {
   return (
     <footer className="footer">

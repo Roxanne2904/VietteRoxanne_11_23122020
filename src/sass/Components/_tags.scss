@@ -17,8 +17,8 @@
     padding: 0 15px 0 15px;
     margin-top: 5px;
     @include responsive-minWidth-MaxWidth('xs', 's') {
-      font-size: 3.125vw;
-      padding: 12px 10px 12px 10px;
+      font-size: 0.8rem;
+      padding: 12px 10px 10px;
       margin-bottom: 10px;
       min-width: 84px;
       height: 18px;

@@ -1,10 +1,4 @@
-// import { StyledCardsCover } from '../../Styled/Components/Cards/index'
 import { Link } from 'react-router-dom'
-// import { StyledCards } from '../../Styled/Components/Cards/index'
-// import { StyledCardsTitle } from '../../Styled/Components/Cards/index'
-// import { StyledCardsGradient } from '../../Styled/Components/Cards/index'
-// import { StyledCardsImgContain } from '../../Styled/Components/Cards/index'
-// import { StyledCardsImg } from '../../Styled/Components/Cards/index'
 //Context
 import { DatasContext } from '../../Utils/Context/index'
 import { useContext } from 'react'

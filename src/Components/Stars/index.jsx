@@ -2,10 +2,6 @@ import { useParams } from 'react-router-dom'
 //--
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
-//styled
-// import { StyledUlStars } from '../../Styled/Components/Stars/index'
-// import { StyledLiFullStars } from '../../Styled/Components/Stars/index'
-// import { StyledLiEmptyStars } from '../../Styled/Components/Stars/index'
 //propTypes
 import PropTypes from 'prop-types'
 

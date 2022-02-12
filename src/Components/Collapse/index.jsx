@@ -4,15 +4,6 @@ import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
-//Styled
-//Host page
-// import { StyledList } from '../../Styled/Components/Lists/index'
-// import { StyledListTitleContain } from '../../Styled/Components/Lists/index'
-// import { StyledListTitle } from '../../Styled/Components/Lists/index'
-// import { StyledListIcone } from '../../Styled/Components/Lists/index'
-// import { StyledListUL } from '../../Styled/Components/Lists/index'
-// import { StyledListLi } from '../../Styled/Components/Lists/index'
-// import { StyledListParagraphe } from '../../Styled/Components/Lists/index'
 //propTypes
 import PropTypes from 'prop-types'
 

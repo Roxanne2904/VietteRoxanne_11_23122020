@@ -5,7 +5,7 @@
     margin-bottom: 30px;
   }
   &--about {
-    width: 80%;
+    width: 75%;
     @include responsive-minWidth-MaxWidth('xs', 'sm') {
       width: 100%;
       margin-bottom: inherit;
@@ -32,10 +32,10 @@
     &__title {
       font-weight: 500;
       @include responsive-minWidth-MaxWidth('xs', 's') {
-        font-size: 4.0625vw;
+        font-size: 1rem;
       }
       @include responsive-minWidth-MaxWidth('s_1', 'sm') {
-        font-size: 3.118vw;
+        font-size: 1.2rem;
       }
     }
     &__icone {
@@ -43,12 +43,12 @@
       font-size: 1.3rem;
       cursor: pointer;
       @include responsive-minWidth-MaxWidth('xs', 'sm') {
-        font-size: 4.0625vw;
+        font-size: 1.25rem;
       }
     }
   }
   &__paragraph {
-    padding: 25px;
+    padding: 40px 20px;
     position: relative;
     top: -10px;
     z-index: -1;
@@ -58,10 +58,10 @@
     border-radius: 0 0 $cardsRadius $cardsRadius;
     @include responsive-minWidth-MaxWidth('xs', 'sm') {
       min-height: 143px;
-      font-size: 3.3vw; //12px
+      font-size: 1rem;
     }
     &--about {
-      min-height: inherit;
+      min-height: 146px;
       @include responsive-minWidth-MaxWidth('xs', 'sm') {
         font-size: inherit;
       }
@@ -83,7 +83,7 @@
     &__li {
       padding: 3px 0;
       @include responsive-minWidth-MaxWidth('xs', 'sm') {
-        font-size: 3.3vw;
+        font-size: 1rem;
       }
     }
   }

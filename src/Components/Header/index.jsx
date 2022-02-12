@@ -1,13 +1,5 @@
 import logo from '../../assets/logo_kasa.png'
-
-//styled
-// import { StyledHeader } from '../../Styled/Components/Header/index'
-// import { StyledImg } from '../../Styled/Components/Header/index'
-// import { StyledNav } from '../../Styled/Components/Header/index'
-// import { StyledUl } from '../../Styled/Components/Header/index'
 import { Link } from 'react-router-dom'
-// import { StyledLi } from '../../Styled/Components/Header/index'
-//
 
 function Header() {
   return (
