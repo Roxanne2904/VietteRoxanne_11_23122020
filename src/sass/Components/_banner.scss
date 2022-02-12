@@ -1,0 +1,67 @@
+.banner {
+  position: relative;
+  margin-top: 63px;
+  @include banner-heights;
+  @include responsive-minWidth-MaxWidth('xs', 'sm') {
+    margin-top: 20px;
+  }
+  @include responsive-xs_1-sm-bannerMinHeight;
+  @include responsive-sm_1-l-bannerMinHeight;
+  &--about {
+    @include aboutBanner-heights;
+    @include responsive-xs_1-sm-aboutBannerMinHeight;
+    @include responsive-sm_1-l-aboutBannerMinHeight;
+  }
+  &__img {
+    border-radius: $mainRadius;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    @include banner-heights;
+    @include responsive-sx-sm-bannerRadius;
+    @include responsive-xs_1-sm-bannerMinHeight;
+    @include responsive-sm_1-l-bannerMinHeight;
+    &--about {
+      @include aboutBanner-heights;
+      @include responsive-xs_1-sm-aboutBannerMinHeight;
+      @include responsive-sm_1-l-aboutBannerMinHeight;
+    }
+  }
+  &__layer {
+    display: block;
+    position: absolute;
+    border-radius: $mainRadius;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.2;
+    @include responsive-sx-sm-bannerRadius;
+  }
+  &__title {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: $mainTitleFontSize;
+    text-align: center;
+    color: white;
+    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+      font-size: 6.875vw;
+      text-align: start;
+      margin-left: 19px;
+      top: 28%;
+    }
+    @include responsive-minWidth-MaxWidth('sm_1', 'l') {
+      font-size: 4.3vw;
+      text-align: center;
+      top: 40%;
+    }
+    &__main {
+      @include responsive-minWidth-MaxWidth('xs', 'sm') {
+        display: block;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

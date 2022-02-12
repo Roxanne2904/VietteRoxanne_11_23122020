@@ -1,0 +1,75 @@
+// GLOBAL RESPONSIVE
+@mixin responsive-minWidth-MaxWidth($_keyMin, $_keyMax) {
+  @media screen and (min-width: map-get($breakpoints, $_keyMin)) and(max-width: map-get($breakpoints, $_keyMax)) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin responsive-minWidth($_keyMin) {
+  @media screen and (min-width: map-get($breakpoints, $_keyMin)) {
+    & {
+      @content;
+    }
+  }
+}
+//---
+//BANNER
+//handle the height
+@mixin responsive-xs_1-sm-bannerMinHeight {
+  @include responsive-minWidth-MaxWidth('xs_1', 'sm') {
+    min-height: 33.75vw;
+  }
+}
+
+@mixin responsive-xs_1-sm-aboutBannerMinHeight {
+  @include responsive-minWidth-MaxWidth('xs_1', 'sm') {
+    @include min-height-inherit;
+  }
+}
+
+@mixin responsive-sm_1-l-bannerMinHeight {
+  @include responsive-minWidth-MaxWidth('sm_1', 'l') {
+    min-height: 18.2vw;
+  }
+}
+
+@mixin responsive-sm_1-l-aboutBannerMinHeight {
+  @include responsive-minWidth-MaxWidth('sm_1', 'l') {
+    @include min-height-inherit;
+  }
+}
+//handle the radius
+@mixin responsive-sx-sm-bannerRadius {
+  @include responsive-minWidth-MaxWidth('xs', 'l') {
+    border-radius: $cardsRadius;
+  }
+}
+//---
+//CAROUSEL
+@mixin responsive-xs-sm-carouselHeight {
+  @include responsive-minWidth-MaxWidth('xs', 'sm') {
+    height: $height-phone-carousel;
+  }
+}
+
+@mixin responsive-xs-sm-carouselArrows {
+  @include responsive-minWidth-MaxWidth('xs', 's') {
+    font-size: 9.375vw;
+    top: 49%;
+    padding: 0 10px 0 10px;
+  }
+  @include responsive-minWidth-MaxWidth('s_1', 'sm') {
+    font-size: 7.375vw;
+    top: 47%;
+    padding: 0 20px 0 20px;
+  }
+}
+//---
+//STARS
+@mixin responsive-xs-s-starsSize {
+  @include responsive-minWidth-MaxWidth('xs', 's') {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,36 @@
+//Color
+$colorPrimary: #ff6060;
+$colorBackG: #f6f6f6;
+$colorEmptyStars: #e3e3e3;
+//FontSize
+$mainFontSize: 1.5rem; //24px
+$mainTitleFontSize: 3rem;
+$titleFontSize: 2.25rem; //36px
+$subTitleFontSize: 1.125rem; //18px
+//Radius
+$mainRadius: 25px; //24px
+$cardsRadius: 10px; //24px
+//Weight
+$mainFontWeight: 500;
+//Margin
+$mainMarginTop: 20px;
+$marginRight: 10px;
+//Height
+$max-Height: 223px;
+$height-phone-carousel: 255px;
+$height-desktop-carousel: 415px;
+
+//Breakpoint
+$breakpoints: (
+  'xs': 320px,
+  'xs_1': 400px,
+  's': 480px,
+  's_1': 481px,
+  'sm': 768px,
+  'sm_1': 769px,
+  'm': 950px,
+  'l': 1080px,
+  'xl': 1400px,
+  'xxl': 1600px,
+  'xxxl': 1800px,
+);

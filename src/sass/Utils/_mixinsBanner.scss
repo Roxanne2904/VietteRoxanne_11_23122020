@@ -1,0 +1,14 @@
+@mixin aboutBanner-heights {
+  min-height: inherit;
+  max-height: inherit;
+  height: $max-Height;
+}
+@mixin banner-heights {
+  min-height: 111px;
+  max-height: $max-Height;
+  height: inherit;
+}
+
+@mixin min-height-inherit {
+  min-height: inherit;
+}

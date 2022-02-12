@@ -1,0 +1,18 @@
+.ulStars {
+  list-style-type: none;
+  display: flex;
+  margin-top: 33px;
+  @include responsive-minWidth-MaxWidth('xs', 's') {
+    margin-top: inherit;
+  }
+  &__filledStars {
+    @include starsPattern;
+    color: $colorPrimary;
+    @include responsive-xs-s-starsSize;
+  }
+  &__emptyStars {
+    @include starsPattern;
+    color: $colorEmptyStars;
+    @include responsive-xs-s-starsSize;
+  }
+}

@@ -1,12 +1,12 @@
 import Banner from '../../Components/Banner'
-import Lists from '../../Components/Lists/index'
-import styled from 'styled-components'
+import Collapse from '../../Components/Collapse/index'
+// import styled from 'styled-components'
 
-const StyledAboutContain = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`
+// const StyledAboutContain = styled.div`
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+// `
 const text = {
   fiability: `Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.`,
   respect: `La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.`,
@@ -17,17 +17,17 @@ const text = {
 function About() {
   return (
     <main>
-      <Banner img={'http://localhost:3000/banner_about.png'} />
-      <StyledAboutContain>
-        <Lists contain={text.fiability} title="Fiabilité" page="about" />
-        <Lists contain={text.respect} title="Respect" page="about" />
-        <Lists contain={text.service} title="Service" page="about" />
-        <Lists
-          contain={text.responsability}
+      <Banner page="about" />
+      <div className="aboutContent">
+        <Collapse content={text.fiability} title="Fiabilité" page="about" />
+        <Collapse content={text.respect} title="Respect" page="about" />
+        <Collapse content={text.service} title="Service" page="about" />
+        <Collapse
+          content={text.responsability}
           title="Responsabilité"
           page="about"
         />
-      </StyledAboutContain>
+      </div>
     </main>
   )
 }

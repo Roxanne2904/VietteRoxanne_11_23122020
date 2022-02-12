@@ -1,0 +1,85 @@
+.hostContent {
+  display: flex;
+  justify-content: space-between;
+  @include responsive-minWidth-MaxWidth('xs', 's') {
+    flex-direction: column;
+  }
+  &__titlesAndTags {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $mainMarginTop;
+    flex-direction: column;
+    &__mainTitle {
+      font-size: $titleFontSize;
+      color: $colorPrimary;
+      @include responsive-minWidth-MaxWidth('xs', 'sm') {
+        font-size: 5.3125vw;
+      }
+    }
+    &__subtitle {
+      display: block;
+      margin-top: 10px;
+      font-size: $subTitleFontSize;
+      color: $colorPrimary;
+      font-weight: $mainFontWeight;
+    }
+  }
+  &__StarsAndImgContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    @include responsive-minWidth-MaxWidth('xs', 's') {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__imgContent {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      &__img {
+        display: block;
+        border-radius: 100%;
+        height: 64px;
+        width: 64px;
+        @include responsive-minWidth-MaxWidth('xs', 's') {
+          height: 10vw;
+          width: 10vw;
+        }
+      }
+      &__namesContent {
+        display: flex;
+        flex-direction: column;
+        align-items: self-end;
+        margin-right: 10px;
+        &__firstName {
+          display: block;
+          font-size: $subTitleFontSize;
+          color: $colorPrimary;
+          font-weight: $mainFontWeight;
+          @include responsive-minWidth-MaxWidth('xs', 's') {
+            font-size: 3.75vw;
+          }
+        }
+        &__name {
+          display: block;
+          font-size: $subTitleFontSize;
+          color: $colorPrimary;
+          font-weight: $mainFontWeight;
+          @include responsive-minWidth-MaxWidth('xs', 's') {
+            font-size: 3.75vw;
+          }
+        }
+      }
+    }
+  }
+}
+.collapseContent {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  @include responsive-minWidth-MaxWidth('xs', 'sm') {
+    flex-direction: column;
+  }
+}

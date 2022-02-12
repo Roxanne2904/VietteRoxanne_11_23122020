@@ -1,0 +1,27 @@
+.carousel {
+  display: flex;
+  position: relative;
+  color: white;
+  &__arrowLeft {
+    @include arrows-pattern;
+    @include responsive-xs-sm-carouselArrows;
+  }
+  &__imgContent {
+    @include height-and-width-desktop-carousel;
+    overflow: hidden;
+    border-radius: $mainRadius;
+    margin-top: $mainMarginTop;
+    @include responsive-xs-sm-carouselHeight;
+    &__img {
+      @include height-and-width-desktop-carousel;
+      object-fit: cover;
+      display: block;
+      @include responsive-xs-sm-carouselHeight;
+    }
+  }
+  &__arrowRight {
+    @include arrows-pattern;
+    right: 0;
+    @include responsive-xs-sm-carouselArrows;
+  }
+}

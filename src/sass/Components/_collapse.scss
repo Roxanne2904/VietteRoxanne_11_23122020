@@ -1,0 +1,90 @@
+.collapse {
+  width: 47%; //80%
+  @include responsive-minWidth-MaxWidth('xs', 'sm') {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  &--about {
+    width: 80%;
+    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+      width: 100%;
+      margin-bottom: inherit;
+    }
+  }
+  &__titleContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 20px;
+    background: $colorPrimary;
+    border-radius: $cardsRadius;
+    color: white;
+    align-items: center;
+    margin-top: inherit;
+    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+      padding: 8px 15px; //13px 20px
+    }
+    &--about {
+      margin-top: 31px;
+      @include responsive-minWidth-MaxWidth('xs', 'sm') {
+        padding: 13px 20px;
+      }
+    }
+    &__title {
+      font-weight: 500;
+      @include responsive-minWidth-MaxWidth('xs', 's') {
+        font-size: 4.0625vw;
+      }
+      @include responsive-minWidth-MaxWidth('s_1', 'sm') {
+        font-size: 3.118vw;
+      }
+    }
+    &__icone {
+      display: block;
+      font-size: 1.3rem;
+      cursor: pointer;
+      @include responsive-minWidth-MaxWidth('xs', 'sm') {
+        font-size: 4.0625vw;
+      }
+    }
+  }
+  &__paragraph {
+    padding: 25px;
+    position: relative;
+    top: -10px;
+    z-index: -1;
+    color: $colorPrimary;
+    background: $colorBackG;
+    min-height: 249px;
+    border-radius: 0 0 $cardsRadius $cardsRadius;
+    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+      min-height: 143px;
+      font-size: 3.3vw; //12px
+    }
+    &--about {
+      min-height: inherit;
+      @include responsive-minWidth-MaxWidth('xs', 'sm') {
+        font-size: inherit;
+      }
+    }
+  }
+  &__ul {
+    list-style-type: none;
+    padding: 25px;
+    position: relative;
+    top: -10px;
+    z-index: -1;
+    color: $colorPrimary;
+    background: $colorBackG;
+    min-height: 249px;
+    border-radius: 0 0 $cardsRadius $cardsRadius;
+    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+      min-height: 143px;
+    }
+    &__li {
+      padding: 3px 0;
+      @include responsive-minWidth-MaxWidth('xs', 'sm') {
+        font-size: 3.3vw;
+      }
+    }
+  }
+}

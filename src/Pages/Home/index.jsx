@@ -6,12 +6,9 @@ import Cards from '../../Components/Cards'
 import Banner from '../../Components/Banner'
 
 function Home() {
-  // const { datas } = useContext(DatasContext)
-  // console.log(datas)
-
   return (
     <main>
-      <Banner img={'http://localhost:3000/banner.png'} />
+      <Banner page="home" />
       <Cards />
     </main>
 
