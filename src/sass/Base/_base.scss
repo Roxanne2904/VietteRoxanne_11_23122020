@@ -42,10 +42,27 @@ code {
     monospace;
 }
 
+@keyframes open {
+  from {
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: top;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
 //Collapse's state
 .close {
   display: none;
 }
 .open {
   display: block;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-name: open;
+  animation-fill-mode: both;
 }
