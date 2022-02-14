@@ -1,37 +1,35 @@
-import { StyledCardsCover } from '../../Styled/Components/Cards/index'
-import { StyledCards } from '../../Styled/Components/Cards/index'
-import { StyledCardsTitle } from '../../Styled/Components/Cards/index'
-import { StyledCardsGradient } from '../../Styled/Components/Cards/index'
-import { StyledCardsImgContain } from '../../Styled/Components/Cards/index'
-import { StyledCardsImg } from '../../Styled/Components/Cards/index'
+import { Link } from 'react-router-dom'
 //Context
 import { DatasContext } from '../../Utils/Context/index'
 import { useContext } from 'react'
-
 function Cards() {
   const { datas } = useContext(DatasContext)
   console.log(datas)
   return (
-    <StyledCardsCover>
+    <ul className="cardsContent">
       {datas !== null &&
         datas.map((data) => {
           return (
-            <StyledCards
+            <Link
+              className="cardsContent__card"
               to={`/host/${data.id}`}
               key={`${data.id}-${data.title}`}
             >
-              <StyledCardsGradient></StyledCardsGradient>
-              <StyledCardsImgContain>
-                <StyledCardsImg
+              <span className="cardsContent__gradient"></span>
+              <figure className="cardsContent__imgContent">
+                <img
+                  className="cardsContent__imgContent__img"
                   src={`${data.pictures[0]}`}
                   alt={`${data.title}`}
                 />
-                <StyledCardsTitle>{data.title}</StyledCardsTitle>
-              </StyledCardsImgContain>
-            </StyledCards>
+                <figcaption className="cardsContent__imgContent__title">
+                  {data.title}
+                </figcaption>
+              </figure>
+            </Link>
           )
         })}
-    </StyledCardsCover>
+    </ul>
   )
 }
 

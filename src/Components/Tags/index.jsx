@@ -1,9 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { DatasContext } from '../../Utils/Context/index'
 import { useContext } from 'react'
-//Styled
-import { StyledUlTags } from '../../Styled/Components/Tags/index'
-import { StyledLiTags } from '../../Styled/Components/Tags/index'
 
 function Tags(props) {
   const { id } = useParams()
@@ -13,11 +10,13 @@ function Tags(props) {
   hostDatas = datas !== null && datas.filter((data) => data.id.includes(id))
 
   return (
-    <StyledUlTags>
+    <ul className="ulTags">
       {hostDatas[0].tags.map((tag) => (
-        <StyledLiTags key={`${hostDatas[0].id}-${tag}`}>{tag}</StyledLiTags>
+        <li className="ulTags__liTags" key={`${hostDatas[0].id}-${tag}`}>
+          {tag}
+        </li>
       ))}
-    </StyledUlTags>
+    </ul>
   )
 }
 export default Tags

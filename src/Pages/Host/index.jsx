@@ -4,19 +4,20 @@ import { useContext } from 'react'
 import Carousel from '../../Components/Carousel'
 import Tags from '../../Components/Tags'
 import Stars from '../../Components/Stars'
-import Lists from '../../Components/Lists'
-
+import Collapse from '../../Components/Collapse/index'
+import Error from '../Error'
 //Styled
-import { StyledHostIdContain } from '../../Styled/Pages/Host/index'
-import { StyledHostIdProfil } from '../../Styled/Pages/Host/index'
-import { StyledHostIdImg } from '../../Styled/Pages/Host/index'
-import { StyledHostMainTitle } from '../../Styled/Pages/Host/index'
-import { StyledHostSubTitle } from '../../Styled/Pages/Host/index'
-import { StyledHostNameContain } from '../../Styled/Pages/Host/index'
-import { StyledHostFirstName } from '../../Styled/Pages/Host/index'
-import { StyledHostName } from '../../Styled/Pages/Host/index'
-import { StyledTagsAndStarsContain } from '../../Styled/Pages/Host/index'
-import { StyledListContain } from '../../Styled/Pages/Host/index'
+// import { StyledGeneralIdContain } from '../../Styled/Pages/Host/index'
+// import { StyledHostIdAndTagsContain } from '../../Styled/Pages/Host/index'
+// import { StyledHostIdProfil } from '../../Styled/Pages/Host/index'
+// import { StyledHostIdImg } from '../../Styled/Pages/Host/index'
+// import { StyledHostMainTitle } from '../../Styled/Pages/Host/index'
+// import { StyledHostSubTitle } from '../../Styled/Pages/Host/index'
+// import { StyledHostNameContain } from '../../Styled/Pages/Host/index'
+// import { StyledHostFirstName } from '../../Styled/Pages/Host/index'
+// import { StyledHostName } from '../../Styled/Pages/Host/index'
+// import { StyledProfilAndStarsContain } from '../../Styled/Pages/Host/index'
+// import { StyledListContain } from '../../Styled/Pages/Host/index'
 
 function HostPage(props) {
   const { id } = useParams()
@@ -25,44 +26,52 @@ function HostPage(props) {
 
   hostDatas = datas !== null && datas.filter((data) => data.id.includes(id))
 
-  const rating = hostDatas !== false && parseInt(hostDatas[0].rating)
-  const description = hostDatas !== false && hostDatas[0].description
-  const equipments = hostDatas !== false && hostDatas[0].equipments
+  const rating =
+    hostDatas !== false &&
+    hostDatas.length !== 0 &&
+    parseInt(hostDatas[0].rating)
+  const description =
+    hostDatas !== false && hostDatas.length !== 0 && hostDatas[0].description
+  const equipments =
+    hostDatas !== false && hostDatas.length !== 0 && hostDatas[0].equipments
 
-  return (
-    hostDatas !== false && (
-      <main>
-        <Carousel />
-        <StyledHostIdContain>
+  return hostDatas !== false && hostDatas.length !== 0 ? (
+    <main>
+      <Carousel />
+      <div className="hostContent">
+        <div className="hostContent__titlesAndTags">
           <div>
-            <StyledHostMainTitle>{`${hostDatas[0].title}`}</StyledHostMainTitle>
-            <StyledHostSubTitle>{`${hostDatas[0].location}`}</StyledHostSubTitle>
+            <h1 className="hostContent__titlesAndTags__mainTitle">{`${hostDatas[0].title}`}</h1>
+            <span className="hostContent__titlesAndTags__subtitle">{`${hostDatas[0].location}`}</span>
           </div>
-          <StyledHostIdProfil>
-            <StyledHostIdImg
+          <Tags />
+        </div>
+        <div className="hostContent__StarsAndImgContent">
+          <figure className="hostContent__StarsAndImgContent__imgContent">
+            <img
+              className="hostContent__StarsAndImgContent__imgContent__img"
               src={`${hostDatas[0].host.picture}`}
               alt={`${hostDatas[0].host.name}`}
             />
-            <StyledHostNameContain>
-              <StyledHostFirstName>{`${
+            <figcaption className="hostContent__StarsAndImgContent__imgContent__namesContent">
+              <span className="hostContent__StarsAndImgContent__imgContent__namesContent__firstName">{`${
                 hostDatas[0].host.name.split(' ')[0]
-              }`}</StyledHostFirstName>
-              <StyledHostName>{`${
+              }`}</span>
+              <span className="hostContent__StarsAndImgContent__imgContent__namesContent__name">{`${
                 hostDatas[0].host.name.split(' ')[1]
-              }`}</StyledHostName>
-            </StyledHostNameContain>
-          </StyledHostIdProfil>
-        </StyledHostIdContain>
-        <StyledTagsAndStarsContain>
-          <Tags />
+              }`}</span>
+            </figcaption>
+          </figure>
           <Stars rating={rating} />
-        </StyledTagsAndStarsContain>
-        <StyledListContain>
-          <Lists contain={description} title="Description" page="host" />
-          <Lists contain={equipments} title="Equipements" page="host" />
-        </StyledListContain>
-      </main>
-    )
+        </div>
+      </div>
+      <div className="collapseContent">
+        <Collapse content={description} title="Description" page="host" />
+        <Collapse content={equipments} title="Equipements" page="host" />
+      </div>
+    </main>
+  ) : (
+    <Error />
   )
 }
 

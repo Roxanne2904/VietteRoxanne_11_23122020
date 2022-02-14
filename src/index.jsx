@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './css/index.css'
+import './css/style.css'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 //Components
@@ -12,7 +12,7 @@ import HostPage from './Pages/Host/index'
 import About from './Pages/About'
 import Footer from './Components/Footer'
 //GlobalStyled
-import GlobalStyled from './Styled/Global/index'
+// import GlobalStyled from './Styled/Global/index'
 //Context
 import { DatasProvider } from './Utils/Context/index'
 // basename={process.env.PUBLIC_URL}
@@ -20,7 +20,6 @@ ReactDOM.render(
   <React.StrictMode>
     <Router basename={process.env.PUBLIC_URL}>
       <DatasProvider>
-        <GlobalStyled />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

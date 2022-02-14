@@ -1,0 +1,36 @@
+.errorTitle {
+  font-size: 18rem;
+  text-align: center;
+  margin-top: 169px;
+  color: $colorPrimary;
+  @include responsive-minWidth-MaxWidth('xs', 'sm') {
+    font-size: 30vw;
+    margin-top: 48.44vw;
+  }
+  &__msg {
+    display: block;
+    text-align: center;
+    font-size: $titleFontSize;
+    color: $colorPrimary;
+    margin-top: 66px;
+    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+      font-size: 5.4vw;
+      margin-top: 5.4375vw;
+    }
+    &__main {
+      @include responsive-minWidth-MaxWidth('xs', 'sm') {
+        display: block;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    text-align: center;
+    margin-top: 182px;
+    color: $colorPrimary;
+    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+      font-size: 4.375vw;
+      margin: 155px 0 100px 0;
+    }
+  }
+}
