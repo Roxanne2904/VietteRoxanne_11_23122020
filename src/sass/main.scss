@@ -1,0 +1,23 @@
+@import './Utils/variables.scss';
+@import './Utils/mixinsBanner.scss';
+@import './Utils/mixinsCarousel.scss';
+@import './Utils/mixinsStars.scss';
+@import './Utils/mixinsCards.scss';
+@import './Utils/mixinsResponsive.scss';
+//
+@import './Base/base.scss';
+//
+@import './Layout/layout.scss';
+//
+@import './Components/header.scss';
+@import './Components/banner.scss';
+@import './Components/cards.scss';
+@import './Components/carousel.scss';
+@import './Components/collapse.scss';
+@import './Components/stars.scss';
+@import './Components/tags.scss';
+@import './Components/footer.scss';
+//
+@import './Pages/host.scss';
+@import './Pages/about.scss';
+@import './Pages/error.scss';

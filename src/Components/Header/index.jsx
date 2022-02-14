@@ -1,32 +1,22 @@
-import React from 'react'
 import logo from '../../assets/logo_kasa.png'
+import { Link } from 'react-router-dom'
 
-//styled
-import { StyledHeader } from '../../Styled/Header/index'
-import { StyledImg } from '../../Styled/Header/index'
-import { StyledNav } from '../../Styled/Header/index'
-import { StyledUl } from '../../Styled/Header/index'
-import { StyledLi } from '../../Styled/Header/index'
-//
-
-class Header extends React.Component {
-  render() {
-    return (
-      <StyledHeader role="banner">
-        <StyledImg src={logo} alt="logo" tabIndex="1" />
-        <StyledNav>
-          <StyledUl>
-            <StyledLi to="/" tabIndex="1">
-              Accueil
-            </StyledLi>
-            <StyledLi to="/test" tabIndex="1">
-              A propos
-            </StyledLi>
-          </StyledUl>
-        </StyledNav>
-      </StyledHeader>
-    )
-  }
+function Header() {
+  return (
+    <header className="header" role="banner">
+      <img className="header__img" src={logo} alt="logo" tabIndex="1" />
+      <nav className="header__nav">
+        <ul className="header__nav__ul">
+          <Link className="header__nav__ul__li" to="/" tabIndex="1">
+            Accueil
+          </Link>
+          <Link className="header__nav__ul__li" to="/about" tabIndex="1">
+            A Propos
+          </Link>
+        </ul>
+      </nav>
+    </header>
+  )
 }
 
 export default Header

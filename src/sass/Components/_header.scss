@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  &__img {
+    max-width: 100%;
+    height: auto;
+    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+      max-width: 45%;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    &__ul {
+      display: flex;
+      padding: 0;
+      list-style-type: none;
+      width: 100%;
+      justify-content: space-between;
+      &__li {
+        font-size: $mainFontSize;
+        color: $colorPrimary;
+        font-weight: $mainFontWeight;
+        text-decoration: none;
+        margin: 10px 0 0 57px;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        @include responsive-minWidth-MaxWidth('xs', 'sm') {
+          font-size: 3.75vw;
+          margin-left: 7.1428vw;
+        }
+      }
+    }
+  }
+}

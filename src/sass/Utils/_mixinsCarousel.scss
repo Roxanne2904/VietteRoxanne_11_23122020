@@ -1,0 +1,15 @@
+@mixin height-and-width-desktop-carousel {
+  height: $height-desktop-carousel;
+  width: 100%;
+}
+@mixin arrows-pattern {
+  display: block;
+  position: absolute;
+  top: 46%;
+  font-size: 4.5rem;
+  padding: 0 23px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
