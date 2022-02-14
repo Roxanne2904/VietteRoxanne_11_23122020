@@ -33,7 +33,10 @@ export function DatasProvider({ children }) {
   const [datas, setDatas] = useState(null)
 
   useEffect(() => {
-    fetch('http://localhost:3000/logements.json').then((response) =>
+    fetch('http://localhost:3000/logements.json', {
+      mode: 'cors',
+      credentials: 'include',
+    }).then((response) =>
       response
         .json()
         .then((datas) => setDatas(datas))
