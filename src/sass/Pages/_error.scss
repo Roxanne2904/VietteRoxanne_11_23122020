@@ -3,9 +3,13 @@
   text-align: center;
   margin-top: 169px;
   color: $colorPrimary;
-  @include responsive-minWidth-MaxWidth('xs', 'sm') {
+  @include responsive-minWidth-MaxWidth('xs', 's') {
     font-size: 30vw;
     margin-top: 48.44vw;
+  }
+  @include responsive-minWidth-MaxWidth('s_1', 'sm') {
+    font-size: 30vw;
+    margin-top: 35vw;
   }
   &__msg {
     display: block;
@@ -13,13 +17,18 @@
     font-size: $titleFontSize;
     color: $colorPrimary;
     margin-top: 66px;
-    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+    @include responsive-minWidth-MaxWidth('xs', 's') {
       font-size: 5.4vw;
+      margin-top: 5.4375vw;
+    }
+    @include responsive-minWidth-MaxWidth('s_1', 'sm') {
+      font-size: 5vw;
       margin-top: 5.4375vw;
     }
     &__main {
       @include responsive-minWidth-MaxWidth('xs', 'sm') {
         display: block;
+        margin-bottom: 9px;
       }
     }
   }
@@ -28,8 +37,12 @@
     text-align: center;
     margin-top: 182px;
     color: $colorPrimary;
-    @include responsive-minWidth-MaxWidth('xs', 'sm') {
+    @include responsive-minWidth-MaxWidth('xs', 's') {
       font-size: 4.375vw;
+      margin: 155px 0 100px 0;
+    }
+    @include responsive-minWidth-MaxWidth('s_1', 'sm') {
+      font-size: 3.2vw;
       margin: 155px 0 100px 0;
     }
   }

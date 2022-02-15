@@ -29,16 +29,25 @@ header {
   }
 }
 
+@media screen and (min-width: 1600px) {
+  .wrapper {
+    margin: 0 auto;
+    width: 1600px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .wrapper,
+footer {
+    margin: 0 auto;
+    width: 1600px;
+  }
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-@media screen and (min-width: 1600px) {
-  body {
-    margin: 0 auto;
-    width: 1600px;
-  }
 }
 
 code {
@@ -104,10 +113,22 @@ code {
   text-decoration: underline;
   cursor: pointer;
 }
-@media screen and (min-width: 280px) and (max-width: 768px) {
+@media screen and (min-width: 280px) and (max-width: 400px) {
   .header__nav__ul__li {
-    font-size: 3.75vw;
-    margin-left: 7.1428vw;
+    font-size: 4.3vw;
+    margin-left: 5vw;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 480px) {
+  .header__nav__ul__li {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header__nav__ul__li {
+    font-size: 1.3rem;
+    margin-left: 2rem;
   }
 }
 
@@ -322,7 +343,7 @@ code {
 }
 .cardsContent__imgContent__title {
   display: block;
-  max-width: 50%;
+  max-width: 70%;
   position: absolute;
   bottom: 0;
   margin: 20px;
@@ -614,7 +635,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 .footer__logoContent {
   margin: 66px 0 35px 0;
@@ -754,10 +775,16 @@ code {
   margin-top: 169px;
   color: #ff6060;
 }
-@media screen and (min-width: 280px) and (max-width: 768px) {
+@media screen and (min-width: 280px) and (max-width: 480px) {
   .errorTitle {
     font-size: 30vw;
     margin-top: 48.44vw;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .errorTitle {
+    font-size: 30vw;
+    margin-top: 35vw;
   }
 }
 .errorTitle__msg {
@@ -767,15 +794,22 @@ code {
   color: #ff6060;
   margin-top: 66px;
 }
-@media screen and (min-width: 280px) and (max-width: 768px) {
+@media screen and (min-width: 280px) and (max-width: 480px) {
   .errorTitle__msg {
     font-size: 5.4vw;
+    margin-top: 5.4375vw;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .errorTitle__msg {
+    font-size: 5vw;
     margin-top: 5.4375vw;
   }
 }
 @media screen and (min-width: 280px) and (max-width: 768px) {
   .errorTitle__msg__main {
     display: block;
+    margin-bottom: 9px;
   }
 }
 .errorTitle__link {
@@ -784,9 +818,15 @@ code {
   margin-top: 182px;
   color: #ff6060;
 }
-@media screen and (min-width: 280px) and (max-width: 768px) {
+@media screen and (min-width: 280px) and (max-width: 480px) {
   .errorTitle__link {
     font-size: 4.375vw;
+    margin: 155px 0 100px 0;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .errorTitle__link {
+    font-size: 3.2vw;
     margin: 155px 0 100px 0;
   }
 }

@@ -12,6 +12,7 @@ function Gallery(props) {
   let { hostDatas } = props
 
   hostDatas = datas !== null && datas.filter((data) => data.id.includes(id))
+  console.log(hostDatas)
   const hostPictures = hostDatas[0].pictures
   const [img, updateImg] = useState(0)
 

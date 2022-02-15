@@ -27,9 +27,17 @@
           text-decoration: underline;
           cursor: pointer;
         }
-        @include responsive-minWidth-MaxWidth('xs', 'sm') {
-          font-size: 3.75vw;
-          margin-left: 7.1428vw;
+        @include responsive-minWidth-MaxWidth('xs', 'xs_1') {
+          font-size: 4.3vw;
+          margin-left: 5vw;
+        }
+        @include responsive-minWidth-MaxWidth('xs_1', 's') {
+          font-size: 1.1rem;
+          margin-left: 1rem;
+        }
+        @include responsive-minWidth-MaxWidth('s_1', 'sm') {
+          font-size: 1.3rem;
+          margin-left: 2rem;
         }
       }
     }

@@ -15,13 +15,15 @@ function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <DatasProvider>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/host/:id" element={<HostPage hostDatas={null} />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+        <div className="wrapper">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/host/:id" element={<HostPage hostDatas={null} />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </div>
         <Footer />
       </DatasProvider>
     </Router>
