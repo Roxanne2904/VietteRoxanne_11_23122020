@@ -1,5 +1,8 @@
 import Banner from '../../Components/Banner'
+import Error from '../Error'
 import Collapse from '../../Components/Collapse/index'
+import { DatasContext } from '../../Utils/Context/index'
+import { useContext } from 'react'
 
 const text = {
   fiability: `Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.`,
@@ -9,7 +12,9 @@ const text = {
 }
 
 function About() {
-  return (
+  const { datas } = useContext(DatasContext)
+
+  return datas !== null ? (
     <main>
       <Banner page="about" />
       <div className="aboutContent">
@@ -23,6 +28,8 @@ function About() {
         />
       </div>
     </main>
+  ) : (
+    <Error />
   )
 }
 

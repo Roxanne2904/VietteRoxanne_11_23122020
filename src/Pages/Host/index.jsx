@@ -12,7 +12,8 @@ function HostPage(props) {
   const { datas } = useContext(DatasContext)
   let { hostDatas } = props
 
-  hostDatas = datas !== null && datas.filter((data) => data.id.includes(id))
+  hostDatas =
+    datas !== null && datas.filter((data) => (data.id === id ? true : false))
 
   const rating =
     hostDatas !== false &&
@@ -23,7 +24,7 @@ function HostPage(props) {
   const equipments =
     hostDatas !== false && hostDatas.length !== 0 && hostDatas[0].equipments
 
-  return hostDatas !== false && hostDatas.length !== 0 ? (
+  return datas !== null && hostDatas !== false && hostDatas.length !== 0 ? (
     <main>
       <Gallery />
       <div className="hostContent">
