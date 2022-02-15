@@ -351,12 +351,12 @@ code {
   }
 }
 
-.carousel {
+.gallery {
   display: flex;
   position: relative;
   color: white;
 }
-.carousel__arrowLeft {
+.gallery__arrowLeft {
   display: block;
   position: absolute;
   top: 46%;
@@ -368,20 +368,20 @@ code {
   cursor: pointer;
 }
 @media screen and (min-width: 280px) and (max-width: 480px) {
-  .carousel__arrowLeft {
+  .gallery__arrowLeft {
     font-size: 9.375vw;
     top: 49%;
     padding: 0 10px 0 10px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .carousel__arrowLeft {
+  .gallery__arrowLeft {
     font-size: 7.375vw;
     top: 47%;
     padding: 0 20px 0 20px;
   }
 }
-.carousel__imgContent {
+.gallery__imgContent {
   height: 415px;
   width: 100%;
   overflow: hidden;
@@ -389,24 +389,24 @@ code {
   margin-top: 20px;
 }
 @media screen and (min-width: 280px) and (max-width: 768px) {
-  .carousel__imgContent {
+  .gallery__imgContent {
     height: 255px;
     border-radius: 10px;
   }
 }
-.carousel__imgContent__img {
+.gallery__imgContent__img {
   height: 415px;
   width: 100%;
   object-fit: cover;
   display: block;
 }
 @media screen and (min-width: 280px) and (max-width: 768px) {
-  .carousel__imgContent__img {
+  .gallery__imgContent__img {
     height: 255px;
     border-radius: 10px;
   }
 }
-.carousel__arrowRight {
+.gallery__arrowRight {
   display: block;
   position: absolute;
   top: 46%;
@@ -419,14 +419,14 @@ code {
   right: 0;
 }
 @media screen and (min-width: 280px) and (max-width: 480px) {
-  .carousel__arrowRight {
+  .gallery__arrowRight {
     font-size: 9.375vw;
     top: 49%;
     padding: 0 10px 0 10px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .carousel__arrowRight {
+  .gallery__arrowRight {
     font-size: 7.375vw;
     top: 47%;
     padding: 0 20px 0 20px;

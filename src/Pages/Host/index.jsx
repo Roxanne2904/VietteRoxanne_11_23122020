@@ -1,23 +1,11 @@
 import { useParams } from 'react-router-dom'
 import { DatasContext } from '../../Utils/Context/index'
 import { useContext } from 'react'
-import Carousel from '../../Components/Carousel'
-import Tags from '../../Components/Tags'
-import Stars from '../../Components/Stars'
+import Gallery from '../../Components/Gallery/index'
+import Tags from '../../Components/Tags/index'
+import Stars from '../../Components/Stars/index'
 import Collapse from '../../Components/Collapse/index'
 import Error from '../Error'
-//Styled
-// import { StyledGeneralIdContain } from '../../Styled/Pages/Host/index'
-// import { StyledHostIdAndTagsContain } from '../../Styled/Pages/Host/index'
-// import { StyledHostIdProfil } from '../../Styled/Pages/Host/index'
-// import { StyledHostIdImg } from '../../Styled/Pages/Host/index'
-// import { StyledHostMainTitle } from '../../Styled/Pages/Host/index'
-// import { StyledHostSubTitle } from '../../Styled/Pages/Host/index'
-// import { StyledHostNameContain } from '../../Styled/Pages/Host/index'
-// import { StyledHostFirstName } from '../../Styled/Pages/Host/index'
-// import { StyledHostName } from '../../Styled/Pages/Host/index'
-// import { StyledProfilAndStarsContain } from '../../Styled/Pages/Host/index'
-// import { StyledListContain } from '../../Styled/Pages/Host/index'
 
 function HostPage(props) {
   const { id } = useParams()
@@ -37,7 +25,7 @@ function HostPage(props) {
 
   return hostDatas !== false && hostDatas.length !== 0 ? (
     <main>
-      <Carousel />
+      <Gallery />
       <div className="hostContent">
         <div className="hostContent__titlesAndTags">
           <div>

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
-function Carousel(props) {
+function Gallery(props) {
   const { id } = useParams()
   const { datas } = useContext(DatasContext)
   let { hostDatas } = props
@@ -45,32 +45,32 @@ function Carousel(props) {
   //----------------------------------
 
   return hostPictures.length !== 1 ? (
-    <div className="carousel">
+    <div className="gallery">
       <button
-        className="carousel__arrowLeft"
+        className="gallery__arrowLeft"
         onClick={() => handleOnClickLeft()}
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </button>
-      <figure className="carousel__imgContent">
+      <figure className="gallery__imgContent">
         <img
-          className="carousel__imgContent__img"
+          className="gallery__imgContent__img"
           src={`${hostDatas[0].pictures[img]}`}
           alt={`${hostDatas[0].title}`}
         />
       </figure>
       <button
-        className="carousel__arrowRight"
+        className="gallery__arrowRight"
         onClick={() => handleOnClickRight()}
       >
         <FontAwesomeIcon icon={faChevronRight} />
       </button>
     </div>
   ) : (
-    <div className="carousel">
-      <figure className="carousel__imgContent">
+    <div className="gallery">
+      <figure className="gallery__imgContent">
         <img
-          className="carousel__imgContent__img"
+          className="gallery__imgContent__img"
           src={`${hostDatas[0].pictures[img]}`}
           alt={`${hostDatas[0].title}`}
         />
@@ -79,4 +79,4 @@ function Carousel(props) {
   )
 }
 
-export default Carousel
+export default Gallery
