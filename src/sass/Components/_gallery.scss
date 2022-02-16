@@ -10,7 +10,6 @@
     @include height-and-width-desktop-carousel;
     overflow: hidden;
     border-radius: $mainRadius;
-    margin-top: $mainMarginTop;
     @include responsive-xs-sm-carouselHeight;
     &__img {
       @include height-and-width-desktop-carousel;

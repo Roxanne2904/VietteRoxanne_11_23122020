@@ -12,20 +12,31 @@
   font-family: "montserratregular";
 }
 
-main,
 header {
-  margin: 40px 100px;
+  margin: 40px 100px 0 100px;
 }
 @media screen and (min-width: 280px) and (max-width: 768px) {
-  main,
-header {
+  header {
     margin: 20px;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 950px) {
-  main,
-header {
-    margin: 30px 40px;
+  header {
+    margin: 30px 40px 0 40px;
+  }
+}
+
+main {
+  margin: 25px 100px 0 100px;
+}
+@media screen and (min-width: 280px) and (max-width: 768px) {
+  main {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 950px) {
+  main {
+    margin: 25px 40px 0 40px;
   }
 }
 
@@ -391,14 +402,14 @@ code {
 @media screen and (min-width: 280px) and (max-width: 480px) {
   .gallery__arrowLeft {
     font-size: 9.375vw;
-    top: 49%;
+    top: 44%;
     padding: 0 10px 0 10px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .gallery__arrowLeft {
     font-size: 7.375vw;
-    top: 47%;
+    top: 42%;
     padding: 0 20px 0 20px;
   }
 }
@@ -407,12 +418,12 @@ code {
   width: 100%;
   overflow: hidden;
   border-radius: 25px;
-  margin-top: 20px;
 }
 @media screen and (min-width: 280px) and (max-width: 768px) {
   .gallery__imgContent {
     height: 255px;
     border-radius: 10px;
+    margin-top: inherit;
   }
 }
 .gallery__imgContent__img {
@@ -425,6 +436,7 @@ code {
   .gallery__imgContent__img {
     height: 255px;
     border-radius: 10px;
+    margin-top: inherit;
   }
 }
 .gallery__arrowRight {
@@ -442,14 +454,14 @@ code {
 @media screen and (min-width: 280px) and (max-width: 480px) {
   .gallery__arrowRight {
     font-size: 9.375vw;
-    top: 49%;
+    top: 44%;
     padding: 0 10px 0 10px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .gallery__arrowRight {
     font-size: 7.375vw;
-    top: 47%;
+    top: 42%;
     padding: 0 20px 0 20px;
   }
 }
@@ -674,7 +686,7 @@ code {
 .hostContent__titlesAndTags {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 30px;
   flex-direction: column;
 }
 .hostContent__titlesAndTags__mainTitle {

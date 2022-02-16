@@ -5,6 +5,7 @@ import { useContext } from 'react'
 import Cards from '../../Components/Cards'
 import Banner from '../../Components/Banner'
 import Error from '../Error'
+
 function Home() {
   const { datas } = useContext(DatasContext)
 

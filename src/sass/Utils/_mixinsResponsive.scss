@@ -52,18 +52,19 @@
   @include responsive-minWidth-MaxWidth('xs', 'sm') {
     height: $height-phone-carousel;
     border-radius: $cardsRadius;
+    margin-top: inherit;
   }
 }
 
 @mixin responsive-xs-sm-carouselArrows {
   @include responsive-minWidth-MaxWidth('xs', 's') {
     font-size: 9.375vw;
-    top: 49%;
+    top: 44%;
     padding: 0 10px 0 10px;
   }
   @include responsive-minWidth-MaxWidth('s_1', 'sm') {
     font-size: 7.375vw;
-    top: 47%;
+    top: 42%;
     padding: 0 20px 0 20px;
   }
 }

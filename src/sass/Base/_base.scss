@@ -14,14 +14,23 @@
   font-family: 'montserratregular';
 }
 
-main,
 header {
-  margin: 40px 100px;
+  margin: 40px 100px 0 100px;
   @include responsive-minWidth-MaxWidth('xs', 'sm') {
     margin: 20px;
   }
   @include responsive-minWidth-MaxWidth('sm_1', 'm') {
-    margin: 30px 40px;
+    margin: 30px 40px 0 40px;
+  }
+}
+
+main {
+  margin: 25px 100px 0 100px;
+  @include responsive-minWidth-MaxWidth('xs', 'sm') {
+    margin: 20px;
+  }
+  @include responsive-minWidth-MaxWidth('sm_1', 'm') {
+    margin: 25px 40px 0 40px;
   }
 }
 .wrapper {
