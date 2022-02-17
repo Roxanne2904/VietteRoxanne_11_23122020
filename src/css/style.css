@@ -695,7 +695,7 @@ code {
 }
 @media screen and (min-width: 280px) and (max-width: 768px) {
   .hostContent__titlesAndTags__mainTitle {
-    font-size: 5.3125vw;
+    font-size: 1.2rem;
   }
 }
 .hostContent__titlesAndTags__subtitle {
@@ -716,6 +716,7 @@ code {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
   }
 }
 .hostContent__StarsAndImgContent__imgContent {
@@ -793,10 +794,10 @@ code {
     margin-top: 48.44vw;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 1080px) {
   .errorTitle {
-    font-size: 30vw;
-    margin-top: 35vw;
+    font-size: 25vw;
+    margin-top: 20vw;
   }
 }
 .errorTitle__msg {

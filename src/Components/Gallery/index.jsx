@@ -18,9 +18,11 @@ function Gallery(props) {
 
   //handleClicks
   const handleOnClickLeft = () => {
+    console.log(`l'image précédente avait pour index: ${img}`)
     img <= 0 ? updateImg(hostPictures.length - 1) : updateImg(img - 1)
   }
   const handleOnClickRight = () => {
+    console.log(`l'image précédente avait pour index: ${img}`)
     img < hostPictures.length - 1 ? updateImg(img + 1) : updateImg(0)
   }
 
@@ -30,12 +32,12 @@ function Gallery(props) {
       const { keyCode } = e
 
       if (keyCode === 39) {
+        console.log(`l'image précédente avait pour index: ${img}`)
         img < hostPictures.length - 1 ? updateImg(img + 1) : updateImg(0)
-        console.log(img)
       }
       if (keyCode === 37) {
+        console.log(`l'image précédente avait pour index: ${img}`)
         img <= 0 ? updateImg(hostPictures.length - 1) : updateImg(img - 1)
-        console.log(img)
       }
     }
 

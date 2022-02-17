@@ -7,9 +7,9 @@
     font-size: 30vw;
     margin-top: 48.44vw;
   }
-  @include responsive-minWidth-MaxWidth('s_1', 'sm') {
-    font-size: 30vw;
-    margin-top: 35vw;
+  @include responsive-minWidth-MaxWidth('s_1', 'l') {
+    font-size: 25vw;
+    margin-top: 20vw;
   }
   &__msg {
     display: block;
