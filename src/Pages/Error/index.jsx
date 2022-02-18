@@ -1,10 +1,21 @@
-//Styled
-// import { StyledErrorTitle } from '../../Styled/Pages/Error/index.jsx'
-// import { StyledErrorMessage } from '../../Styled/Pages/Error/index.jsx'
+import { DatasContext } from '../../Utils/Context/index'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
-// import { StyledErrorLink } from '../../Styled/Pages/Error/index.jsx'
 
 function Error() {
+  const { datas } = useContext(DatasContext)
+  let currentPathname = document.location.pathname
+
+  currentPathname !== '/about' &&
+    currentPathname !== '/' &&
+    datas != null &&
+    datas.map((data) => currentPathname !== `host/${data.id}`) &&
+    window.history.replaceState(
+      { pathname: currentPathname },
+      'pathname',
+      'error404'
+    )
+
   return (
     <main>
       <h1 className="errorTitle">404</h1>

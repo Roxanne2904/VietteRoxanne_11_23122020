@@ -12,31 +12,42 @@ function Gallery(props) {
   let { hostDatas } = props
 
   hostDatas = datas !== null && datas.filter((data) => data.id.includes(id))
-  console.log(hostDatas)
+
   const hostPictures = hostDatas[0].pictures
   const [img, updateImg] = useState(0)
+  const [width, setWindowWidth] = useState(window.innerWidth)
+  //---------------------------------------------------------
+  //---------------------------------------------------------
+  useEffect(() => {
+    //Handle the update window dimension
+    const updateDimensions = () => {
+      const currentWidth = window.innerWidth
+      setWindowWidth(currentWidth)
+    }
 
+    window.addEventListener('resize', updateDimensions)
+
+    return () => window.removeEventListener('resize', updateDimensions)
+  }, [width])
+  //---------------------------------------------------------
+  //---------------------------------------------------------
   //handleClicks
   const handleOnClickLeft = () => {
-    console.log(`l'image précédente avait pour index: ${img}`)
     img <= 0 ? updateImg(hostPictures.length - 1) : updateImg(img - 1)
   }
   const handleOnClickRight = () => {
-    console.log(`l'image précédente avait pour index: ${img}`)
     img < hostPictures.length - 1 ? updateImg(img + 1) : updateImg(0)
   }
-
+  //---------------------------------------------------------
+  //---------------------------------------------------------
   //handleArrowKeydown
   useEffect(() => {
     const handleArrowKeyDown = (e) => {
       const { keyCode } = e
-
       if (keyCode === 39) {
-        console.log(`l'image précédente avait pour index: ${img}`)
         img < hostPictures.length - 1 ? updateImg(img + 1) : updateImg(0)
       }
       if (keyCode === 37) {
-        console.log(`l'image précédente avait pour index: ${img}`)
         img <= 0 ? updateImg(hostPictures.length - 1) : updateImg(img - 1)
       }
     }
@@ -45,8 +56,8 @@ function Gallery(props) {
 
     return () => window.removeEventListener('keydown', handleArrowKeyDown)
   }, [img, hostPictures.length])
-  //----------------------------------
-
+  //---------------------------------------------------------
+  //---------------------------------------------------------
   return hostPictures.length !== 1 ? (
     <div className="gallery">
       <button
@@ -61,6 +72,11 @@ function Gallery(props) {
           src={`${hostDatas[0].pictures[img]}`}
           alt={`${hostDatas[0].title}`}
         />
+        <figcaption
+          className={`gallery__imgContent__${width <= 768 ? 'none' : 'count'}`}
+        >
+          {`${img + 1}/${hostPictures.length}`}
+        </figcaption>
       </figure>
       <button
         className="gallery__arrowRight"
@@ -77,6 +93,11 @@ function Gallery(props) {
           src={`${hostDatas[0].pictures[img]}`}
           alt={`${hostDatas[0].title}`}
         />
+        <figcaption
+          className={`gallery__imgContent__${width <= 768 ? 'none' : 'count'}`}
+        >
+          {`${img + 1}/${hostPictures.length}`}
+        </figcaption>
       </figure>
     </div>
   )

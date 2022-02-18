@@ -439,6 +439,17 @@ code {
     margin-top: inherit;
   }
 }
+.gallery__imgContent__count {
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.gallery__imgContent__none {
+  display: none;
+}
 .gallery__arrowRight {
   display: block;
   position: absolute;

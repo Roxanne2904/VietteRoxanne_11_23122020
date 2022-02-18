@@ -5,7 +5,7 @@ import { useContext } from 'react'
 
 function Cards() {
   const { datas } = useContext(DatasContext)
-  console.log(datas)
+
   return (
     <ul className="cardsContent">
       {datas !== null &&

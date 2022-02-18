@@ -8,7 +8,6 @@ import Error from '../Error'
 
 function Home() {
   const { datas } = useContext(DatasContext)
-
   return datas !== null ? (
     <main>
       <Banner page="home" />
