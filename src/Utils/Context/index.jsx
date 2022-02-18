@@ -1,5 +1,6 @@
 import { createContext } from 'react'
 import { useState, useEffect } from 'react'
+
 //import React, { Component } from 'react'
 
 export const DatasContext = createContext()
@@ -33,7 +34,7 @@ export function DatasProvider({ children }) {
   const [datas, setDatas] = useState(null)
 
   useEffect(() => {
-    fetch('logements.json').then((response) =>
+    fetch('../logements.json').then((response) =>
       response
         .json()
         .then((datas) => setDatas(datas))
