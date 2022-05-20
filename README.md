@@ -1,4 +1,6 @@
 # Getting Started with Create React App
+## I started this project on 17/09/2021
+*Training begins on 23/12/2020*
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
